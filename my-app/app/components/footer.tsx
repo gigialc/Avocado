@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                             HealthByte
                         </Link>
                     </div>
-                    <div className="space-x-4 flex">
+                    {/* <div className="space-x-4 flex">
                         <Link href="/api" className="hover:underline">
                             API
                         </Link>
@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
                             Home
                         </Link>
                        
-                    </div>
+                    </div> */}
                     <div>
                         <a href="mailto:contact@healthbyte.com" className="hover:underline">
-                            contact@healthbyte.com
+                            galcaraz@bu.edu
                         </a>
                     </div>
                 </div>
