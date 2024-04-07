@@ -12,6 +12,7 @@ export default function APIPage() {
   const [output, setOutput] = React.useState('Output will be displayed here.');
   const [question, setQuestion] = React.useState('');
 
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const displayOutput = `Topic: ${topic}, Source: ${source}, API URL: ${apiUrl}, Output Format: ${outputFormat}`;
@@ -22,6 +23,10 @@ export default function APIPage() {
       apiUrl,
       outputFormat,
     });
+  };
+
+  const submitApiSetting = () => {
+    window.location.href = '/content-hub';
   };
 
   return (
@@ -110,7 +115,7 @@ export default function APIPage() {
             </div>
           </fieldset>
           <Link href="/content-hub">
-          <button type="submit"  className=" bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">
+          <button type="submit" onSubmit={submitApiSetting} className=" bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">
             Submit API Settings
           </button>
           </Link>
