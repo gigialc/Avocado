@@ -109,10 +109,11 @@ export default function APIPage() {
               </label>
             </div>
           </fieldset>
-
-          <button type="submit" className=" bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">
+          <Link href="/content-hub">
+          <button type="submit"  className=" bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">
             Submit API Settings
           </button>
+          </Link>
         </form>
       </div>
     </div>
