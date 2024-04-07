@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                     <div className="flex flex-col items-center md:flex-row md:mx-6">
                         <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Home</Link>
                         <Link href="/api-access" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API</Link>
-                        <Link href="/test" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Content Hub</Link>
+                        <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Content Hub</Link>
                         <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Contribute</Link>
                     </div>
                 
