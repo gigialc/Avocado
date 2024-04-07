@@ -16,15 +16,19 @@ const Navbar: React.FC = () => {
                     <div>
                         <Link href="/" className="text-xl font-bold text-yellow-600 dark:text-yellow md:text-2xl"> HealthByte </Link>
                     </div>
-                    <div className="hidden md:flex items-center space-x-4">
-                        <div className="flex items-center space-x-4">
-                            <Link href="/" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200">Home</Link>
-                            <Link href="/api-access" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200">API</Link>
-                            <Link href="/test" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200">Content Hub</Link>
-                            <Link href="/contribute" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200">Contribute</Link>
-                        </div>
+                    <div className="flex justify-end w-full">
+
+                    {/* Desktop menu */}
+                    
+                    <div className="hidden md:flex">
+                        <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">Home</Link>
+                        <Link href="/api-access" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">API</Link>
+                        <Link href="/test" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">Content Hub</Link>
+                        <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">Contribute</Link>
                     </div>
-                    {/* Shoe the menu when it is not a mobile version */}
+                    </div>
+
+                        {/* Mobile menu button */}  
                     <div className="flex md:hidden">
                         
                         <button onClick={toggleMenu} className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
