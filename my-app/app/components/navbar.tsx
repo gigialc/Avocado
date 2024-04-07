@@ -21,17 +21,17 @@ const Navbar: React.FC = () => {
                     {/* Desktop menu */}
                     
                     <div className="hidden md:flex">
-                        <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">Home</Link>
-                        <Link href="/api-access" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">API</Link>
-                        <Link href="/test" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">Content Hub</Link>
-                        <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0">Contribute</Link>
+                        <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Home</Link>
+                        <Link href="/api-access" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">API</Link>
+                        <Link href="/test" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Content Hub</Link>
+                        <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Contribute</Link>
                     </div>
                     </div>
 
                         {/* Mobile menu button */}  
                     <div className="flex md:hidden">
                         
-                        <button onClick={toggleMenu} className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <button onClick={toggleMenu} className="text-gray-800 dark:text-gray-800 hover:text-gray-800 dark:hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:focus:text-gray-800" aria-label="toggle menu">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-6 h-6">
                                 {isOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
