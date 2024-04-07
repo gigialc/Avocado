@@ -7,19 +7,20 @@ const TestPage = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    fetch('http://localhost:5000/api/get_response', {
-        mode: 'cors',
-        credentials: 'include',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ query: query })
-      })
-      .then(response => response.json())
-      .then(data => setResponse(data.response))
-      .catch(error => console.error('Error:', error)); 
-    };
+    fetch('http://127.0.0.1:5000/get_response', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        query: 'what happens when men are infertile'
+    })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+    console.error('Error:', error);
+    })};
 
   return (
     <form onSubmit={handleSubmit}>

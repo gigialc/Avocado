@@ -2,17 +2,13 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 from getpass import getpass
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from pinecone import Pinecone
 from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-
-
-app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])
 # configure client
 pc = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
@@ -63,20 +59,29 @@ def get_response(query):
     result = complete(prompt)
     return result.choices[0].message.content
 
+# query = "what happens when men are infertile"
 
-@app.route('/api/get_response', methods=['POST'])
+# print (get_response(query))
+# def api_get_response():
+#     data = request.get_json()
+#     query = data.get('query')
+#     response = get_response(query)
+#     return jsonify({'response': response})
 
-@app.after_request
-def set_referrer_policy(response):
-    response.headers['Referrer-Policy'] = 'no-referrer'  # or use 'origin', 'unsafe-url', etc.
-    return response
+# if __name__ == '__main__':
+    
+#     app.run(debug=True)
 
+
+app = Flask(__name__)
+
+@app.route('/get_response', methods=['POST'])
 def api_get_response():
+    print('here')
     data = request.get_json()
     query = data.get('query')
     response = get_response(query)
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    
     app.run(debug=True)
