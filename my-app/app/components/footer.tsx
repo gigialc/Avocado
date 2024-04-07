@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
                         </Link>
                     </div>
                     <div className="space-x-4 flex">
-                        <Link href="/api-access" className="hover:underline">
+                        <Link href="/api" className="hover:underline">
                             API
                         </Link>
                         <Link href="/contribute" className="hover:underline">
