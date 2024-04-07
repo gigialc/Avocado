@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 from getpass import getpass
-from langchain_openai import OpenAIEmbeddings
+# from langchain.embeddings.openai import OpenAIEmbeddings
 from pinecone import Pinecone
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -13,20 +13,30 @@ load_dotenv()
 pc = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-model_name = "text-embedding-ada-002"
+# model_name = "text-embedding-ada-002"
 index_name = "langchain-multi-query-demo2"
 index = pc.Index(index_name)
 
-embed = OpenAIEmbeddings(
-    model=model_name, openai_api_key=OPENAI_API_KEY, disallowed_special=()
-)
+# embed = OpenAIEmbeddings(
+#     model=model_name, openai_api_key=OPENAI_API_KEY, disallowed_special=()
+# )
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 def generate_embedding(text):
-    # Generate embedding using OpenAI model
-    embedding = embed.embed_documents(texts=[text])
-    return embedding[0]  
+    try:
+        # Use the Embeddings endpoint
+        response = OpenAI.Embedding.create(
+            input=text,
+            model="text-embedding-ada-002"  # Ensure this is the correct model for embeddings
+        )
+        # Assuming response format includes an embeddings array
+        embedding = response['data'][0]['embedding']
+        return embedding
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None
+ 
 
 def complete(prompt):
     response = client.chat.completions.create(
