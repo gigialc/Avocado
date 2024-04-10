@@ -20,16 +20,16 @@ const Navbar: React.FC = () => {
 
                     {/* Desktop menu */}
                     
-                    {/* <div className="hidden md:flex">
-                        <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Home</Link>
-                        <Link href="/api" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">API</Link>
-                        <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Content Hub</Link>
-                        <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Contribute</Link>
+                     <div className="hidden md:flex">
+                        {/* <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Home</Link> */}
+                        <Link href="/api" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">API Docs</Link>
+                        <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Try</Link>
+                        {/* <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Contribute</Link> */}
                     </div>
-                    </div> */}
+                  
 
                         {/* Mobile menu button */}  
-                    {/* <div className="flex md:hidden">
+                 <div className="flex md:hidden">
                         
                         <button onClick={toggleMenu} className="text-gray-800 dark:text-gray-800 hover:text-gray-800 dark:hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:focus:text-gray-800" aria-label="toggle menu">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-6 h-6">
@@ -39,19 +39,20 @@ const Navbar: React.FC = () => {
                                     <path fillRule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"></path>
                                 )}
                             </svg>
-                        </button> */}
+                        </button> 
                     </div> 
                 </div>
 
-                {/* {isOpen && (
+                 {isOpen && (
                     <div className="flex flex-col items-center md:flex-row md:mx-6">
                         <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Home</Link>
-                        <Link href="/api" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API</Link>
+                        <Link href="/api" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API Docs</Link>
                         <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Content Hub</Link>
-                        <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Contribute</Link>
+                        {/* <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Contribute</Link> */}
                     </div>
                 
-                )} */}
+                )} 
+            </div>
             </div>
         </nav>
     );
