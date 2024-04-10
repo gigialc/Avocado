@@ -43,32 +43,31 @@ export default function Home() {
         </div>
       </div>
       <br></br>
-      <br></br>
-      <br></br>
+      
           {/* Additional descriptive sections can go here */}
           <div className="flex flex-wrap justify-center items-start mt-12 gap-10">
-            <div className="bg-gray shadow-lg rounded-lg p-6 w-64 h-auto flex flex-col justify-between">
-              <h3 className="text-lg font-bold text-purple-700">Content Personalization</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow">
-                Customize health content to meet individual user needs, enhancing engagement and retention.
-              </p>
+            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 h-auto flex flex-col justify-between border border-purple-700">
+                <h3 className="text-lg font-bold text-purple-700">Content Personalization</h3>
+                <p className="text-sm text-gray-700 mt-2 flex-grow">
+                    Customize health content to meet individual user needs, enhancing engagement and retention.
+                </p>
             </div>
 
-            <div className="bg-gray shadow-lg rounded-lg p-6 w-64 h-auto flex flex-col justify-between">
-              <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow">
-                We use AI to ensure that the health content is accurate and up-to-date by providing citations and references to the original source.
-              </p>
+            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 h-auto flex flex-col justify-between border border-purple-700">
+                <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
+                <p className="text-sm text-gray-700 mt-2 flex-grow">
+                    We use AI to ensure that the health content is accurate and up-to-date by providing citations and references to the original source.
+                </p>
             </div>
 
-            <div className="bg-gray shadow-lg rounded-lg p-6 w-64 h-auto flex flex-col justify-between">
-              <h3 className="text-lg font-bold text-purple-700">Scalable Delivery</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow">
-                Ensure the scalability of your health content delivery across multiple platforms and user profiles. 
-
-              </p>
+            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 h-auto flex flex-col justify-between border border-purple-700">
+                <h3 className="text-lg font-bold text-purple-700">Scalable Delivery</h3>
+                <p className="text-sm text-gray-700 mt-2 flex-grow">
+                    Ensure the scalability of your health content delivery across multiple platforms and user profiles. 
+                </p>
             </div>
-          </div>
+        </div>
+
 
         </main>
         {/* <h2 className="text-4xl font-bold text-yellow-500 dark:text-yellow-500 text-center mt-20 pb-10">
