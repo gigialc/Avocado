@@ -11,51 +11,66 @@ export default function Home() {
     window.location.href = 'https://calendly.com/galcarazb/30min'; // Specify the URL
   };
 
-  return (
-      <>
-        <Navbar />
-        <main className="flex flex-col min-h-screen justify-between items-center p-24 bg-black-800 dark:bg-black-800">
-            <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl text-center">
-              {/* Text column */}
-              <div className="flex flex-col items-center md:items-center space-y-8">
-                <h2 className="text-4xl font-bold text-yellow-500">
-                  High quality health content at scale
-                </h2>
-                <p className="text-base text-gray-800">
-                  HealthByte is an AI platform to help healthcare companies create credible, written content at scale. The API-based platform summarizes information related to health from credible sources like PubMed in easy-to-read bites, providing personalized health content at scale.
-                </p>
-                <button className="mt-4 bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline " onClick={handleDemoClick}>
-                Book a Demo
-              </button>
-              </div>
-            </div>
-            {/* Additional descriptive sections can go here */}
-          <div className="flex flex-wrap justify-center items-center mt-12 gap-8">
+  const handleOpenClick = () => {
+    window.location.href = "https://healthbyte.mintlify.app/quickstart"
+  };
 
-            <div className="bg-white shadow-lg rounded-lg p-6 w-64 text-center flex flex-col">
+  return (
+    <>
+       <Navbar />
+      <main className="flex flex-col min-h-screen justify-center items-center p-24 bg-radial-gradient from-center to-edges">
+         <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 md:space-y-0 md:space-x-10">
+        <div className="flex flex-col items-center space-y-8">
+          <h1 className="text-7xl font-bold text-yellow-500">
+            HealthByte
+          </h1>
+          {/* <h3 className="text-2xl text-gray-700 font-bold">
+            High quality health content at scale
+          </h3> */}
+          <p className="text-gray-700 text-2xl">
+            HealthByte is an AI-driven platform that enables healthcare companies to generate credible, written content at scale and personalized to each user.
+          </p>
+          <div className="flex space-x-4">
+            <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline" onClick={handleDemoClick}>
+              Book a Demo
+            </button>
+            <button className="bg-gray-900 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg flex items-center focus:outline-none focus:shadow-outline" onClick={handleOpenClick}>
+              API Docs <svg className="ml-2 w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+          {/* Additional descriptive sections can go here */}
+          <div className="flex flex-wrap justify-center items-start mt-12 gap-10">
+            <div className="bg-gray shadow-lg rounded-lg p-6 w-64 h-auto flex flex-col justify-between">
               <h3 className="text-lg font-bold text-purple-700">Content Personalization</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow">
                 Customize health content to meet individual user needs, enhancing engagement and retention.
               </p>
             </div>
 
-            <div className="bg-white shadow-lg rounded-lg p-6 w-64 text-center flex flex-col">
+            <div className="bg-gray shadow-lg rounded-lg p-6 w-64 h-auto flex flex-col justify-between">
               <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow">
                 We use AI to ensure that the health content is accurate and up-to-date by providing citations and references to the original source.
               </p>
             </div>
 
-            <div className="bg-white shadow-lg rounded-lg p-6 w-64 text-center flex flex-col">
+            <div className="bg-gray shadow-lg rounded-lg p-6 w-64 h-auto flex flex-col justify-between">
               <h3 className="text-lg font-bold text-purple-700">Scalable Delivery</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow">
-                Ensure the scalability of your health content delivery across multiple platforms.
+                Ensure the scalability of your health content delivery across multiple platforms and user profiles. 
+
               </p>
             </div>
-
           </div>
-          
-          </main>
+
+        </main>
         {/* <h2 className="text-4xl font-bold text-yellow-500 dark:text-yellow-500 text-center mt-20 pb-10">
           Dynamic Health Content
         </h2> */}
@@ -69,7 +84,6 @@ export default function Home() {
           objectFit="cover"
         />
       </div> */}
-      <br />
       <Footer />
     </>
   );

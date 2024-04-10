@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
                     
                      <div className="hidden md:flex">
                         {/* <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Home</Link> */}
-                        <Link href="/api" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">API Docs</Link>
+                        <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">API Docs</Link>
                         <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Try</Link>
                         {/* <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 md:mx-4 md:my-0">Contribute</Link> */}
                     </div>
