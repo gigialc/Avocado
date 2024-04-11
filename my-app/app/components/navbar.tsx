@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="bg-white shadow dark:bg-white">
+        <nav className="bg-transparent">
           <div className="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between w-full">
               
