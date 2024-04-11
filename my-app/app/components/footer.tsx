@@ -22,9 +22,9 @@ const Footer: React.FC = () => {
                             Home
                         </Link>
 
-                        <Link href="/content-hub" className="hover:underline">
+                        {/* <Link href="/content-hub" className="hover:underline">
                          Try 
-                         </Link>  
+                         </Link>   */}
                     </div> 
                     <div>
                         <a href="mailto:contact@healthbyte.com" className="hover:underline">
