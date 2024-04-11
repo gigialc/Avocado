@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">
                         <Link href="/" className="text-lg font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                            HealthByte
+                            avocado
                         </Link>
                     </div>
                      <div className="space-x-4 flex">
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div className="text-center pt-4">
-                    © {new Date().getFullYear()} HealthByte, All rights reserved.
+                    © {new Date().getFullYear()} avocado, All rights reserved.
                 </div>
             </div>
         </footer>

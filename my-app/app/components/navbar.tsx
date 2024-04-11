@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
             <div className="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center">
                 <div className="flex items-center justify-between">
                     <div>
-                        <Link href="/" className="text-xl font-bold text-yellow-600 dark:text-yellow md:text-2xl"> HealthByte </Link>
+                        <Link href="/" className="text-xl font-bold text-yellow-600 dark:text-yellow md:text-2xl"> avocado </Link>
                     </div>
                     <div className="flex justify-end w-full">
 

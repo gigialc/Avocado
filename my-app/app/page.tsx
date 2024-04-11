@@ -22,13 +22,13 @@ export default function Home() {
          <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 md:space-y-0 md:space-x-10">
         <div className="flex flex-col items-center space-y-8">
           <h1 className="text-7xl font-bold text-yellow-500">
-            HealthByte
+            avocado
           </h1>
           {/* <h3 className="text-2xl text-gray-700 font-bold">
             High quality health content at scale
           </h3> */}
           <p className="text-gray-700 text-2xl">
-            HealthByte is an AI-driven platform that enables healthcare companies to generate credible, written content at scale and personalized to each user.
+          avocado is an AI-driven platform that enables healthcare companies to generate credible, written content at scale and personalized to each user.
           </p>
           <div className="flex space-x-4">
             <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline" onClick={handleDemoClick}>
