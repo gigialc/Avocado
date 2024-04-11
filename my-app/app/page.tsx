@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <main className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5 p-4">
       <Navbar /> {/* Navbar placed right at the top inside main */}
-      <div className="flex flex-col justify-center items-center w-full sm:p-20">
+      <div className="flex flex-col justify-center items-center w-full sm:p-20 pt-12">
          <div className="flex flex-col sm:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 sm:space-y-0 sm:space-x-10">
             <div className="w-full">
             <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 py-2 sm:py-8">
