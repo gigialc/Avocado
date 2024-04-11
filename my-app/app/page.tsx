@@ -45,25 +45,25 @@ export default function Home() {
       <br></br>
       
           {/* Additional descriptive sections can go here */}
-          <div className="flex flex-wrap justify-center items-start mt-12 gap-10">
-            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 h-auto flex flex-col justify-between border border-purple-700">
+          <div className="flex flex-wrap justify-center items-stretch mt-12 gap-10">
+            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 flex flex-col justify-between border border-purple-700">
                 <h3 className="text-lg font-bold text-purple-700">Content Personalization</h3>
                 <p className="text-sm text-gray-700 mt-2 flex-grow">
                     Customize health content to meet individual user needs, enhancing engagement and retention.
                 </p>
             </div>
 
-            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 h-auto flex flex-col justify-between border border-purple-700">
+            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 flex flex-col justify-between border border-purple-700">
                 <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
                 <p className="text-sm text-gray-700 mt-2 flex-grow">
                     We use AI to ensure that the health content is accurate and up-to-date by providing citations and references to the original source.
                 </p>
             </div>
 
-            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 h-auto flex flex-col justify-between border border-purple-700">
+            <div className="bg-gray-100 shadow-2xl rounded-lg p-6 w-64 flex flex-col justify-between border border-purple-700">
                 <h3 className="text-lg font-bold text-purple-700">Scalable Delivery</h3>
                 <p className="text-sm text-gray-700 mt-2 flex-grow">
-                    Ensure the scalability of your health content delivery across multiple platforms and user profiles. 
+                    Ensure the scalability of your health content delivery across multiple platforms and user profiles.
                 </p>
             </div>
         </div>

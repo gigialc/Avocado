@@ -29,10 +29,10 @@ const config: Config = {
       backgroundImage: {
         'radial-gradient': "radial-gradient(circle 500px, var(--tw-gradient-stops))",
       }, 
-      // gradientColorStops: theme => ({
-      //   'center': '#FFF6FF',  // Dark color for the center
-      //   // 'edges': '#FFF6FF',   // Light color for the edges
-      // }),
+       gradientColorStops: theme => ({
+       'center': '#faf4c7',  // Dark color for the center
+       'edges': '#FFF6FF',   // Light color for the edges
+     }),
     },
   },
   plugins: [],
