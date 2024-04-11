@@ -17,12 +17,12 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges">
+      <main className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5">
       <Navbar /> {/* Navbar placed right at the top inside main */}
-      <div className="flex flex-col justify-center items-center w-full sm:p-24">
+      <div className="flex flex-col justify-center items-center w-full sm:p-20">
          <div className="flex flex-col sm:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 sm:space-y-0 sm:space-x-10">
             <div className="w-full">
-            <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 py-2 sm:py-8">
+            <h1 className="text-5xl sm:text-7xl font-bold text-yellow-600 px-4 sm:px-10 py-2 sm:py-8">
                 avocado
               </h1>
               <p className="text-gray-700 text-lg sm:text-2xl pb-4 sm:pb-10">
@@ -33,7 +33,7 @@ export default function Home() {
                 <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full sm:w-auto" onClick={handleDemoClick}>
                   Book a Demo
                 </button>
-                <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg flex items-center justify-center w-full sm:w-auto focus:outline-none focus:shadow-outline" onClick={handleOpenClick}>
+                <button className="bg-yellow-100 hover:bg-yellow-100 text-black font-bold py-2 px-6 rounded-lg shadow-lg flex items-center justify-center w-full sm:w-auto focus:outline-none focus:shadow-outline" onClick={handleOpenClick}>
                   API Docs <svg className="ml-2 w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M9 5l7 7-7 7"/>
                   </svg>

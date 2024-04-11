@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
               
               {/* Logo and Mobile Menu Button */}
               <div>
-                <Link href="/" className="text-xl font-bold text-yellow-600 dark:text-yellow md:text-2xl">avocado</Link>
+                <Link href="/" className="text-xl font-bold text-yellow-600 dark:text-yellow md:text-3xl">avocado</Link>
               </div>
               
               <div className="md:hidden">
@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
               
               {/* Desktop Links */}
               <div className="hidden md:flex">
-                <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Docs</Link>
-                <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Try</Link>
+                <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Docs</Link>
+                <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 md:text-1xl dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Try</Link>
               </div>
             </div>
     
