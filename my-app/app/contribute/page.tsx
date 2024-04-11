@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Footer from '../components/footer';
 
 const QuestionPage = () => {
     const [question, setQuestion] = useState('');
@@ -66,7 +67,9 @@ const QuestionPage = () => {
                 </div>
             </div>
         </div>
+        <Footer />
         </>
+        
     );
 };
 
