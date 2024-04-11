@@ -24,7 +24,11 @@ export default function Home() {
             <div className="w-full">
             <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 py-2 sm:py-8">
                 avocado
+                <p className="text-black text-gray-700 text-xl"> 
+                democratizing healthcare
+              </p>
               </h1>
+             
               <p className="text-gray-700 text-lg sm:text-2xl pb-4 sm:pb-10">
                 avocado health is an AI-driven platform that enables healthcare companies to generate credible, written content at scale unique to their brand.
               </p>

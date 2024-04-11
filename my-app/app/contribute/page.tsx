@@ -1,12 +1,22 @@
 'use client'
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const QuestionPage = () => {
-    const question = "What are holistic more natural ways to treat endometriosis symptoms?";
+    const [question, setQuestion] = useState('');
     const [response, setResponse] = useState('');
     const [responses, setResponses] = useState<string[]>([]);
     const [points, setPoints] = useState(0);
+
+    useEffect(() => {
+        const fetchQuestion = async () => {
+            const { data } = await axios.get('http://api.yoursite.com/question');
+            setQuestion(data.question);
+        };
+        fetchQuestion();
+    }, []);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setResponse(event.target.value);
@@ -15,9 +25,13 @@ const QuestionPage = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (response.trim() !== '') {
-            setResponses(prev => [...prev, response]);
-            setPoints(prev => prev + 1); // Each response earns the user one point
-            setResponse(''); // Clear the input field after submitting
+            axios.post('http://api.yoursite.com/answer', { response })
+                .then(() => {
+                    setResponses(prev => [...prev, response]);
+                    setPoints(prev => prev + 1); // Each response earns the user one point
+                    setResponse(''); // Clear the input field after submitting
+                })
+                .catch(error => console.error('Error posting the answer:', error));
         }
     };
 

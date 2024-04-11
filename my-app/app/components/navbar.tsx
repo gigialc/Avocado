@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
               {/* Desktop Links */}
               <div className="hidden md:flex">
                 <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Docs</Link> 
+                <Link href="/contribute" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Contribute</Link>
                 {/* <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 md:text-1xl dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Try</Link> */}
               </div>
             </div>
@@ -42,7 +43,8 @@ const Navbar: React.FC = () => {
               <div className="flex flex-col items-center md:flex-row md:mx-6">
                 <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Home</Link>
                 <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API Docs</Link>
-                <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Content Hub</Link>
+                {/* <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Content Hub</Link> */}
+                <Link href="/contribute" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Contribute</Link>
               </div>
             )} 
           </div>
