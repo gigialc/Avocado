@@ -30,7 +30,7 @@ export default function Home() {
               </h1>
              
               <p className="text-gray-700 text-lg sm:text-2xl pb-4 sm:pb-10">
-                avocado health is an AI-driven platform that enables healthcare companies to generate credible, written content at scale unique to their brand.
+                avocado health is an AI-driven platform that enables healthcare companies to generate credible, written content at scale and unique to their brand.
               </p>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center ">
