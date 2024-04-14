@@ -1,127 +1,127 @@
-'use client'
-import React from 'react';  // Assuming you're using React 17+ and need the import for JSX
+'use client'  // Assuming you're using React 17+ and need the import for JSX
 import Link from 'next/link';
+import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 
 // use client
-export default function APIPage() {
-  const [topic, setTopic] = React.useState<string>('');
-  const [source, setSource] = React.useState<string>('');
-  const [apiUrl, setApiUrl] = React.useState<string>('');
-  const [outputFormat, setOutputFormat] = React.useState('bullet_points');
-  const [output, setOutput] = React.useState('Output will be displayed here.');
-  const [question, setQuestion] = React.useState('');
-
-
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    const displayOutput = `Topic: ${topic}, Source: ${source}, API URL: ${apiUrl}, Output Format: ${outputFormat}`;
-    setOutput(displayOutput);
-    console.log({
-      topic,
-      source,
-      apiUrl,
-      outputFormat,
-    });
-  };
-
-  const submitApiSetting = () => {
-    window.location.href = '/content-hub';
-  };
-
-  return (
-    <>
-    <Navbar />
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="w-full max-w-4xl p-4 ">
-        <h1 className="text-xl font-bold text-yellow-500 text-center">API Information</h1>
-        <p className="text-center mb-4 text-gray-900">Details about our API and how to use it.</p>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="topic" className="block text-gray-700 text-sm font-bold mb-2">
-              Choose a topic:
-            </label>
-            <select
-              id="topic"
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            >
-              <option value="">Select a Topic</option>
-              <option value="fertility">Fertility</option>
-              <option value="menopause">Menopause</option>
-              <option value="menstruation">Menstruation</option>
-              <option value="mental_health">Mental Health</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="source" className="block text-gray-700 text-sm font-bold mb-2">
-              Choose a data source:
-            </label>
-            <select
-              id="source"
-              value={source}
-              onChange={(e) => setSource(e.target.value)}
-              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            >
-              <option value="">Select a Source</option>
-              <option value="pubmed">PubMed</option>
-              <option value="cdc">CDC</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="apiUrl" className="block text-gray-700 text-sm font-bold mb-2">
-              Your API URL:
-            </label>
-            <input
-              type="text"
-              id="apiUrl"
-              value={apiUrl}
-              onChange={(e) => setApiUrl(e.target.value)}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="https://example.com/api"
-            />
-          </div>
-
-          <fieldset className="text-center">
-            <legend className="text-gray-700 text-sm font-bold mb-2">
-              Choose an output format:
-            </legend>
-            <div className="flex justify-center">
-              <label className="block text-gray-700 mr-4">
-                <input
-                  type="radio"
-                  name="outputFormat"
-                  value="bullet_points"
-                  checked={outputFormat === 'bullet_points'}
-                  onChange={() => setOutputFormat('bullet_points')}
-                  className="mr-2 leading-tight"
-                />
-                Bullet Points
-              </label>
-              <label className="block text-gray-700">
-                <input
-                  type="radio"
-                  name="outputFormat"
-                  value="short_paragraph"
-                  checked={outputFormat === 'short_paragraph'}
-                  onChange={() => setOutputFormat('short_paragraph')}
-                  className="mr-2 leading-tight"
-                />
-                Short Paragraph
-              </label>
+    export default function APIPage() {
+      const [topic, setTopic] = useState('');
+      const [inputText, setInputText] = useState('');
+      const [file, setFile] = useState<File | null>(null);
+      const [links, setLinks] = useState<string[]>([]); // Array of strings for URLs
+      const [newLink, setNewLink] = useState(''); // Temporary state for the input field for new URLs
+      const [activeTab, setActiveTab] = useState('text');
+    
+      const healthTopics = [
+        'Fertility', 'Menopause', 'Menstruation', 'Mental Health', 
+        'Cardiovascular Health', 'Pediatrics', 'Geriatrics', 'Nutrition'
+      ];
+    
+      const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (event.target.files && event.target.files.length > 0) {
+          setFile(event.target.files[0]);
+        }
+      };
+    
+      const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
+        // Add your logic for API key generation or other actions here
+      };
+    
+      const handleAddLink = () => {
+        if (newLink && !links.includes(newLink)) {
+          setLinks([...links, newLink]);
+          setNewLink('');
+        }
+      };
+    
+      const handleRemoveLink = (index: number) => {
+        setLinks(links.filter((_, i) => i !== index));
+      };
+    
+      return (
+        <>
+        <div className=" bg-radial-gradient from-center to-edges sm:p-5 p-4 ">
+          <Navbar/>
+          <div className="flex flex-col items-center min-h-screen pt-20 "> 
+            <div className="w-full max-w-4xl rounded-lg">
+              <h1 className="text-xl font-bold text-yellow-600 text-left">API Configuration</h1>
+              <p className="text-left mb-4 pb-8 text-gray-900">Configure your API. Knowledge base is built from PubMed data only.</p>
+              <div className="mb-4">
+                <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
+                <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
+                <button onClick={() => setActiveTab('link')} className={`px-4 py-2 ${activeTab === 'link' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tr-lg`}>URLs</button>
+              </div>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="topic" className="block text-gray-700 text-sm font-bold mb-2">Choose a health topic:</label>
+                  <select
+                    id="topic"
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                    className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option value="">Select a Topic</option>
+                    {healthTopics.map((topic, index) => (
+                      <option key={index} value={topic.toLowerCase().replace(/\s+/g, '_')}>{topic}</option>
+                    ))}
+                  </select>
+                </div>
+                {activeTab === 'text' && (
+                  <div>
+                    <label htmlFor="inputText" className="block text-gray-700 text-sm font-bold mb-2">Enter text:</label>
+                    <textarea
+                      id="inputText"
+                      value={inputText}
+                      onChange={(e) => setInputText(e.target.value)}
+                      className="shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                      placeholder="Paste your text here"
+                    />
+                  </div>
+                )}
+                {activeTab === 'file' && (
+                  <div>
+                    <label htmlFor="fileInput" className="block text-gray-700 text-sm font-bold mb-2">Upload file:</label>
+                    <input
+                      type="file"
+                      id="fileInput"
+                      onChange={handleFileChange}
+                      className="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer focus:outline-none"
+                    />
+                  </div>
+                )}
+                {activeTab === 'link' && (
+                  <div>
+                    <label htmlFor="newLink" className="block text-gray-700 text-sm font-bold mb-2">Add link:</label>
+                    <div className="flex items-center space-x-2">
+                      <input
+                        type="text"
+                        id="newLink"
+                        value={newLink}
+                        onChange={(e) => setNewLink(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="https://example.com"
+                      />
+                      <button type="button" onClick={handleAddLink} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
+                    </div>
+                    {links.map((link, index) => (
+                      <div key={index} className="flex justify-between items-center p-2 bg-gray-400 rounded mt-2">
+                        <span>{link}</span>
+                        <button onClick={() => handleRemoveLink(index)} className="text-red-500 hover:text-red-700">Remove</button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                  Generate API Key
+                </button>
+              </form>
             </div>
-          </fieldset>
-          <Link href="/content-hub">
-          <button type="submit" onSubmit={submitApiSetting} className=" bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">
-            Submit API Settings
-          </button>
-          </Link>
-        </form>
-      </div>
-    </div>
-    </>
-  );
-}
+          </div>
+        </div>
+          {/* <Link href="/api-marketplace" className="text-blue-500 hover:underline block text-center my-4">Go to API Marketplace</Link> */}
+        </>
+      );
+    }
+  
