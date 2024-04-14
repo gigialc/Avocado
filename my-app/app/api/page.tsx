@@ -162,7 +162,7 @@ import Footer from '../components/footer';
                   </div>
                 )}
                 <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Generate API Key
+                  Generate API
                 </button>
               </form>
               {apiResponse && (

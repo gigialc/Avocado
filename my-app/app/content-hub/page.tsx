@@ -7,9 +7,12 @@ const Contribute = () => {
   const [output, setOutput] = React.useState('Output will be displayed here.');
   const [question, setQuestion] = React.useState('');
   const [apiUrl, setApiUrl] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
+
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    setLoading(true); 
     // Example POST method implementation:
     const options = {
       method: 'POST',
@@ -17,15 +20,20 @@ const Contribute = () => {
       body: JSON.stringify({Query: question})
     };
   
-    fetch('https://your-api-url.com/', options)
+    fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/5122', options)
       .then(response => response.json())
       .then(data => {
-        setOutput(data.answer); // assuming the response has an 'answer' key
+        console.log('data:', data)
+        setOutput(data.choices[0].message.content); // assuming the response has an 'answer' key
       })
       .catch(err => {
         console.error('An error occurred:', err);
         setOutput('An error occurred while fetching data from the API');
+      })
+      .finally(() => {
+        setLoading(false); // Set loading state back to false after fetching data
       });
+
     setQuestion(''); // Clear input after sending
   };
 
@@ -53,6 +61,9 @@ const Contribute = () => {
       </div>
 
         <div className="flex flex-col items-center justify-center flex-grow bg-white w-full">
+            {loading && 
+              <div className="loader"></div>
+            }
           <textarea 
             className="w-full flex-1 bg-transparent text-black resize-none"
             readOnly
