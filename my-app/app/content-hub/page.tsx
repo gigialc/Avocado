@@ -62,7 +62,7 @@ const Contribute = () => {
           </div>
           <div className="w-full px-4 py-2 border-t sticky bottom-0">
 
-            <div className="flex justify-between items-center border-gray  bg-radial-gradient from-center to-edges sm:p-5 p-4">
+            <div className="flex justify-between items-center border-gray ">
               <textarea 
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
