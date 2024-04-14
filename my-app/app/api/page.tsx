@@ -11,6 +11,7 @@ import Navbar from '../components/navbar';
       const [links, setLinks] = useState<string[]>([]); // Array of strings for URLs
       const [newLink, setNewLink] = useState(''); // Temporary state for the input field for new URLs
       const [activeTab, setActiveTab] = useState('text');
+      const [title, setTitle] = useState('');
     
       const healthTopics = [
         'Fertility', 'Menopause', 'Menstruation', 'Mental Health', 
@@ -23,10 +24,25 @@ import Navbar from '../components/navbar';
         }
       };
     
-      const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
         // Add your logic for API key generation or other actions here
+        const options = {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({text: inputText, title: title})
+        };
+
+        try {
+          const response = await fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/add_text_chunks', options);
+          const data = await response.json();
+          console.log(data);
+        } catch (err) {
+          console.error(err);
+        }
+
+
       };
     
       const handleAddLink = () => {
@@ -68,6 +84,18 @@ import Navbar from '../components/navbar';
                     ))}
                   </select>
                 </div>
+
+                <div>
+                  <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
+                  <input
+                    id="title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter your title here"
+                  />
+                </div>
+
                 {activeTab === 'text' && (
                   <div>
                     <label htmlFor="inputText" className="block text-gray-700 text-sm font-bold mb-2">Enter text:</label>
