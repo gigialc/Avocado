@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/navbar';
-import APICard from '../components/apicard'; 
+import APICard from '../components/apicard';
 import Footer from '../components/footer';
 
 const apiData = [
