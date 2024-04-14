@@ -4,74 +4,80 @@ import Link from 'next/link';
 import Navbar from '../components/navbar';
 
 const Contribute = () => {
-  const [topic, setTopic] = React.useState<string>('');
-  const [source, setSource] = React.useState<string>('');
-  const [apiUrl, setApiUrl] = React.useState<string>('');
-  const [outputFormat, setOutputFormat] = React.useState('bullet_points');
   const [output, setOutput] = React.useState('Output will be displayed here.');
   const [question, setQuestion] = React.useState('');
+  const [apiUrl, setApiUrl] = React.useState('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-  
+    // Example POST method implementation:
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({Query: question})
     };
   
-    fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/', options)
+    fetch('https://your-api-url.com/', options)
       .then(response => response.json())
-      .then(response => {
-        console.log('response', response)
-        setOutput(response); // assuming the response is a string
+      .then(data => {
+        setOutput(data.answer); // assuming the response has an 'answer' key
       })
       .catch(err => {
-        console.error(err);
+        console.error('An error occurred:', err);
         setOutput('An error occurred while fetching data from the API');
       });
-  };
-
-  const handleBack = () => {
-    // navigate to the API Access page
-    window.location.href = '/api-access';
+    setQuestion(''); // Clear input after sending
   };
 
   return (
     <>
-    <Navbar />
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white w-full">
-      <div className="flex justify-end w-full p-4">
-        <button onClick={handleBack} className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
-          API
-        </button>
-      </div>
-      <div className="w-full max-w-4xl p-4 flex flex-col bg-white">
-        <div className="flex justify-end space-x-2 mb-2">
-          <button className=" text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
-            👍
-          </button>
-          <button className=" text-white font-bold p-2 rounded-full focus:outline-none focus:shadow-outline">
-            👎
-          </button>
-        </div>
-        <div className="flex-1 overflow-auto p-4 border rounded bg-gray-50">
-        <textarea className="w-full h-full bg-transparent text-black" readOnly value={output}></textarea>
-        </div>
-        <div className="mt-4 flex text-gray-600">
+        <div className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5 p-4">
+      <Navbar />
+      <div className="max-w-4xl rounded-lg pb-10 pt-7">
+        <p className="text-gray-900">Enter API Endpoint</p>
+        <div className="flex items-center space-x-4">
           <input
             type="text"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            className="flex-grow p-2 border rounded-l focus:outline-none focus:shadow-outline"
-            placeholder="Ask HealthByte..."
+            id="apiUrl"
+            value={apiUrl}
+            onChange={(e) => setApiUrl(e.target.value)}
+            className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="https://example.com/api"
           />
-          <button onClick={handleSubmit} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-r focus:outline-none focus:shadow-outline">
-            Submit
+          <button
+            className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none"
+          >
+            Activate
           </button>
         </div>
       </div>
-    </div>
+
+        <div className="flex flex-col items-center justify-center flex-grow bg-white w-full">
+          <textarea 
+            className="w-full flex-1 bg-transparent text-black resize-none"
+            readOnly
+            value={output}
+            style={{ maxHeight: 'calc(100vh - 150px)', overflowY: 'auto' }}
+          ></textarea>
+          </div>
+          <div className="w-full px-4 py-2 border-t sticky bottom-0">
+
+            <div className="flex justify-between items-center border-gray  bg-radial-gradient from-center to-edges sm:p-5 p-4">
+              <textarea 
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                className="flex-grow p-2 border rounded-l text-gray-900 focus:outline-none resize-vertical min-h-[50px] max-h-[150px]"
+                placeholder="Ask avocado health..."
+              ></textarea>
+              <button 
+                onClick={handleSubmit} 
+                className="ml-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
     </>
   );
 };
