@@ -6,8 +6,8 @@ import APICard from '../components/apicard';
 import Footer from '../components/footer';
 
 const apiData = [
-  { id: 1, name: "API One", description: "This is API One description.", price: "Free" },
-  { id: 2, name: "API Two", description: "This is API Two description.", price: "$10" },
+  { id: 1, name: "Cardiovasular", description: "This AI API has been trained on cardiovasular data from x, y and z.", price: "Free" },
+  { id: 2, name: "Fertility", description: "This API has been trined on....", price: "$10" },
   // Add more APIs as needed
 ];
 
@@ -34,7 +34,7 @@ export default function Marketplace() {
             placeholder="Search APIs..."
             value={searchTerm}
             onChange={handleSearchChange}
-            className=" p-2 border rounded"
+            className=" p-2 border rounded text-gray-800"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

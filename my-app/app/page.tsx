@@ -30,7 +30,7 @@ export default function Home() {
               </h1>
              
               <p className="text-gray-700 text-lg sm:text-2xl pb-4 sm:pb-10">
-              avocado health is platform that enables healthcare companies to create personalized AI APIs and generate credible, written content at a scale.
+                Your personal AI copilot for health content generation.
               </p>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center ">
@@ -50,23 +50,23 @@ export default function Home() {
       
         <div className="flex flex-wrap justify-center items-stretch mt-12 gap-4">
           <div className="bg-gray-100 shadow-2xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between border border-purple-700">
-              <h3 className="text-lg font-bold text-purple-700">Content Personalization</h3>
+              <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow">
-                  Customize health content to meet individual user needs, enhancing engagement and retention.
+              Our AI model utilizes PubMed as a foundational knowledge base, which is critical for ensuring that the information provided is based on well-established medical research and data.
               </p>
           </div>
 
           <div className="bg-gray-100 shadow-2xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between border border-purple-700">
-              <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
+              <h3 className="text-lg font-bold text-purple-700">Transparency</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow">
                   We use AI to ensure that the health content is accurate and up-to-date by providing citations and references to the original source.
               </p>
           </div>
 
           <div className="bg-gray-100 shadow-2xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between border border-purple-700">
-              <h3 className="text-lg font-bold text-purple-700">Scalable Delivery</h3>
+              <h3 className="text-lg font-bold text-purple-700">Scalability</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow">
-                  Ensure the scalability of your health content delivery across multiple platforms and user profiles.
+                  Ensure the scalability of your health content delivery across multiple platforms with your personal avocado API.
               </p>
           </div>
       </div>
