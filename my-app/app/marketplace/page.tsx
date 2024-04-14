@@ -15,7 +15,7 @@ export default function Marketplace() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredAPIs, setFilteredAPIs] = useState(apiData);
 
-  const handleSearchChange = (event) => {
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setSearchTerm(value);
     const filtered = apiData.filter(api => api.name.toLowerCase().includes(value.toLowerCase()));
