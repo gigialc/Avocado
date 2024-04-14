@@ -13,6 +13,7 @@ import Navbar from '../components/navbar';
       const [activeTab, setActiveTab] = useState('text');
       const [title, setTitle] = useState('');
       const [apiUrl, setApiUrl] = useState('');
+      const [apiResponse, setApiResponse] = useState('');
     
       const healthTopics = [
         'Fertility', 'Menopause', 'Menstruation', 'Mental Health', 
@@ -38,7 +39,10 @@ import Navbar from '../components/navbar';
         try {
           const response = await fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/add_text_chunks', options);
           const data = await response.json();
-          console.log(data);
+          console.log('dataa:', data);
+          if (data === true) {
+            setApiResponse('https://whispering-beyond-93204-750417d33585.herokuapp.com/5122');
+          }
         } catch (err) {
           console.error(err);
         }
@@ -100,6 +104,17 @@ import Navbar from '../components/navbar';
                   </select>
                 </div>
 
+                <div>
+                <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
+                <input
+                  id="title"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Enter your title here"
+                />
+              </div>
+
                 {activeTab === 'text' && (
                   <div>
                     <label htmlFor="inputText" className="block text-gray-700 text-sm font-bold mb-2">Enter text:</label>
@@ -149,6 +164,13 @@ import Navbar from '../components/navbar';
                   Generate API Key
                 </button>
               </form>
+              {apiResponse && (
+                <div className="text-center mt-4">
+                  <p className="text-blue-500">API URL:</p>
+                  <a href={apiResponse} target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">{apiResponse}</a>
+                </div>
+              )}
+
             </div>
           </div>
         </div>
