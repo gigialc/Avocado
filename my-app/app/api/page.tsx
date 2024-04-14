@@ -11,11 +11,8 @@ import Navbar from '../components/navbar';
       const [links, setLinks] = useState<string[]>([]); // Array of strings for URLs
       const [newLink, setNewLink] = useState(''); // Temporary state for the input field for new URLs
       const [activeTab, setActiveTab] = useState('text');
-<<<<<<< Updated upstream
       const [title, setTitle] = useState('');
-=======
       const [apiUrl, setApiUrl] = useState('');
->>>>>>> Stashed changes
     
       const healthTopics = [
         'Fertility', 'Menopause', 'Menstruation', 'Mental Health', 
@@ -67,20 +64,21 @@ import Navbar from '../components/navbar';
           <div className="flex flex-col items-center min-h-screen pt-20 "> 
             <div className="w-full max-w-4xl rounded-lg">
               <h1 className="text-xl font-bold text-yellow-600 text-left">API Configuration</h1>
-              <p className="text-left mb-4 pb-1 text-gray-900">Configure your API. Knowledge base is built from PubMed data only.</p>
-          {/* existing api endpoint input*/}
-          <div className=" items-right max-w-4xl mb-10 rounded-lg">
-            <p className=" font-bold text-gray-900">Existing API Endpoint</p>
-            <input
-              type="text"
-              id="apiUrl"
-              value={apiUrl}
-              onChange={(e) => setApiUrl(e.target.value)}
-              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="https://example.com/api"
-            />
-          </div>
+              <p className="text-left mb-4 pb-2 text-gray-900">Configure your API. Knowledge base is built from PubMed data only.</p>
+              {/* add a field for entering your existing api endpoint */}
+              <div className=" w-full max-w-4xl rounded-lg pb-10">
+                  <p className="font-bold text-gray-900">Existing API Endpoint</p>
+                  <input
 
+                    type="text"
+                    id="apiUrl"
+                    value={apiUrl}
+                    onChange={(e) => setApiUrl(e.target.value)}
+                    className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="https://example.com/api"
+                  />
+                </div>
+              
               <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
@@ -100,17 +98,6 @@ import Navbar from '../components/navbar';
                       <option key={index} value={topic.toLowerCase().replace(/\s+/g, '_')}>{topic}</option>
                     ))}
                   </select>
-                </div>
-
-                <div>
-                  <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
-                  <input
-                    id="title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="Enter your title here"
-                  />
                 </div>
 
                 {activeTab === 'text' && (
@@ -168,5 +155,5 @@ import Navbar from '../components/navbar';
           {/* <Link href="/api-marketplace" className="text-blue-500 hover:underline block text-center my-4">Go to API Marketplace</Link> */}
         </>
       );
-   }
+    }
   
