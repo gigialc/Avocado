@@ -6,10 +6,42 @@ import APICard from '../components/apicard';
 import Footer from '../components/footer';
 
 const apiData = [
-  { id: 1, name: "Cardiovasular", description: "This AI API has been trained on cardiovasular data from x, y and z.", price: "Free" },
-  { id: 2, name: "Fertility", description: "This API has been trined on....", price: "$10" },
-  // Add more APIs as needed
-];
+    { 
+      id: 1, 
+      name: "Cardiovascular Health", 
+      description: "This API offers real-time cardiovascular health monitoring and analysis, trained on extensive datasets including ECG readings, blood pressure values, and patient histories from global research institutions.", 
+      creator: "HealthByte Labs",
+      price: "Free" 
+    },
+    { 
+      id: 2, 
+      name: "Reproductive Health", 
+      description: "Focused on fertility and reproductive health analytics, this API utilizes data from clinical studies on hormone levels, treatment outcomes, and lifestyle factors to provide insights for healthcare providers.", 
+      creator: "HealthByte Labs",
+      price: "$0.1 per call" 
+    },
+    { 
+      id: 3, 
+      name: "Mental Health Tracking", 
+      description: "Leveraging natural language processing and sentiment analysis, this API tracks mental health by analyzing patient journals and therapy session transcripts to offer predictive insights into mood disorders and treatment effectiveness.", 
+      creator: "HealthByte Labs",
+      price: "$0.1 per call" 
+    },
+    { 
+      id: 4, 
+      name: "Diabetes Management", 
+      description: "This API supports diabetes management through continuous glucose monitoring data analysis, providing personalized recommendations for insulin dosage and lifestyle adjustments based on machine learning models.", 
+      creator: "HealthByte Labs",
+      price: "$0.1 per call" 
+    },
+    { 
+      id: 5, 
+      name: "Oncology Informatics", 
+      description: "Using data from genomic sequencing and clinical trials, this API provides oncology informatics for targeted cancer therapies and prognostics, helping oncologists devise personalized treatment plans.", 
+      creator: "HealthByte Labs",
+      price: "$0.1 per call" 
+    }
+  ];
 
 export default function Marketplace() {
   const [searchTerm, setSearchTerm] = useState('');

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 // use client
     export default function APIPage() {
@@ -173,7 +174,9 @@ import Navbar from '../components/navbar';
 
             </div>
           </div>
+        
         </div>
+        <Footer/>
           {/* <Link href="/api-marketplace" className="text-blue-500 hover:underline block text-center my-4">Go to API Marketplace</Link> */}
         </>
       );
