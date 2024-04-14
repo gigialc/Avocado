@@ -22,13 +22,13 @@ const Footer: React.FC = () => {
                             API Config
                         </Link>
 
-                         <Link href="/-marketplace" className="hover:underline">
+                         <Link href="/marketplace" className="hover:underline">
                          Marketplace 
                          </Link>   
                     </div> 
                     <div>
-                        <a href="mailto:contact@healthbyte.com" className="hover:underline">
-                            galcaraz@bu.edu
+                        <a href="mailto:jricramc@mit.edu, galcaraz@bu.edu" className="hover:underline">
+                            Contact Us       
                         </a>
                     </div>
                 </div>
