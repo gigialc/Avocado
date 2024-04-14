@@ -1,2 +1,2 @@
-# HealthByte
-Harvard Hacks
+# Avocado AI
+AGI Hackathon
