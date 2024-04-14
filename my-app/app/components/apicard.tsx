@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function APICard({ api }) {
+interface API {
+  name: string;
+  description: string;
+  price: string;
+}
+
+export default function APICard({ api }: {api: API}) {
   return (
     <div className="border rounded shadow-lg p-4 bg-white">
       <h2 className="font-bold text-lg text-black ">{api.name}</h2>
