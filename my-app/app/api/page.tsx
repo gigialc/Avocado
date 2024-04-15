@@ -17,8 +17,8 @@ import Footer from '../components/footer';
       const [apiResponse, setApiResponse] = useState('');
     
       const healthTopics = [
-        'Fertility', 'Menopause', 'Menstruation', 'Mental Health', 
-        'Cardiovascular Health', 'Pediatrics', 'Geriatrics', 'Nutrition'
+        'Menopause', 'Menstruation', 'Mental Health', 
+        'Cardiovascular Health', 'Fertility', 'Pediatrics', 'Geriatrics', 'Nutrition'
       ];
     
       const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
