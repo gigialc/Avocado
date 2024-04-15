@@ -30,7 +30,7 @@ export default function Home() {
               </h1>
              
               <p className="text-gray-700 text-lg sm:text-2xl pb-4 sm:pb-10">
-                Your personal AI copilot for health content generation.
+                AI copilot for health content generation.
               </p>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center ">
