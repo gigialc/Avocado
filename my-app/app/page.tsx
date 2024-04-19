@@ -12,7 +12,7 @@ export default function Home() {
   };
 
   const handleOpenClick = () => {
-    window.location.href = "https://healthbyte.mintlify.app/quickstart"
+    window.location.href = "https://avocado.mintlify.app/quickstart"
   };
 
   return (
