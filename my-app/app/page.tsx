@@ -29,8 +29,8 @@ export default function Home() {
               </p>
               </h1>
              
-              <p className="text-gray-700 text-lg sm:text-2xl pb-4 sm:pb-10">
-                AI copilot for accurate health content generation.
+              <p className="text-2xl font-bold text-center text-gray-800 mb-6">
+                ai copilot for accurate health content generation
               </p>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center ">
@@ -49,29 +49,29 @@ export default function Home() {
         <br></br>
       
         <div className="flex flex-wrap justify-center items-stretch mt-12 gap-4">
-          <div className="bg-gray-100 shadow-2xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between border border-purple-700">
-              <h3 className="text-lg font-bold text-purple-700">Accuracy</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow">
-              Our AI model utilizes PubMed as a foundational knowledge base, which is critical for ensuring that the information provided is based on well-established medical research and data.
+          <div className="bg-gray-100 shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between ">
+              <h3 className="text-lg font-bold text-purple-700 text-center">Accuracy</h3>
+              <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
+                Model output is based on well-established medical research and data.
               </p>
           </div>
 
-          <div className="bg-gray-100 shadow-2xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between border border-purple-700">
-              <h3 className="text-lg font-bold text-purple-700">Transparency</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow">
-                  We use AI to ensure that the health content is accurate and up-to-date by providing citations and references to the original data sources.
+          <div className="bg-gray-100 shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between">
+              <h3 className="text-lg font-bold text-purple-700 text-center">Transparency</h3>
+              <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
+                  Every output provides citations and references to the original data sources.
               </p>
           </div>
 
-          <div className="bg-gray-100 shadow-2xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between border border-purple-700">
-              <h3 className="text-lg font-bold text-purple-700">Scalability</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow">
-                  Ensure the scalability of your health content delivery across multiple platforms with your personal avocado API.
+          <div className="bg-gray-100 shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between">
+              <h3 className="text-lg font-bold text-purple-700 text-center">Scalability</h3>
+              <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
+                  Power any health app with our API accross multiple platforms.
               </p>
           </div>
       </div>
       <div className="w-full max-w-5xl mt-52 pb-32">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">avocado health 3x user engagement and saves 100k/year in content writing</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">avocado health 3x user engagement and saves 100k/year in content writing</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             <div className="bg-white shadow-xl rounded-lg py-5 px-4">
               <p className="text-2xl font-bold text-purple-700">60%↑</p>
