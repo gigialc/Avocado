@@ -75,11 +75,11 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             <div className="py-5 px-4">
               <p className="text-5xl font-bold text-purple-700 py-3">60%↑</p>
-              <p className="text-xl text-gray-600">User retantion</p>
+              <p className="text-xl text-gray-600">User retention</p>
             </div>
             <div className="py-5 px-4">
               <p className="text-5xl font-bold text-purple-700 py-3">$100K↓</p>
-              <p className="text-xl text-gray-600">Cost of content writters</p>
+              <p className="text-xl text-gray-600">Cost of content writers</p>
             </div>
             <div className="py-5 px-4">
               <p className="text-5xl font-bold text-purple-700 py-3">100%</p>
@@ -92,7 +92,7 @@ export default function Home() {
        {/* New Section inspired by the uploaded image */}
        <div className="w-full max-w-5xl mx-auto my-5 p-10 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-8">Get Set Up In No Time</h2>
-          <p className="text-xl text-gray-700 mb-8">Get your unique API and start using  it in your health application.</p>
+          <p className="text-xl text-gray-700 mb-8">Get your unique API and start using it in your health application.</p>
           
           {/* Optional: Add an image or a video here to visually represent the process */}
           
