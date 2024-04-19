@@ -113,7 +113,7 @@ export default function Home() {
             </div>
           </div>
           
-          <button className="mt-10 bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-lg" onClick={handleDemoClick}>
+          <button className="mt-10 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg" onClick={handleDemoClick}>
             Book a Demo
           </button>
         </div>
