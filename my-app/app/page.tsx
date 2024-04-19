@@ -99,12 +99,12 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
             <div className="bg-white p-6 rounded-lg shadow-xl">
               <h3 className="text-2xl font-bold text-purple-700 mb-4">Quick Setup</h3>
-              <p className="text-gray-600">With our step-by-step guide, you'll be up and running in less than 30 minutes.</p>
+              <p className="text-gray-600">With our step-by-step guide, you will be up and running in less than 30 minutes.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-xl">
               <h3 className="text-2xl font-bold text-purple-700 mb-4">2 week trial</h3>
-              <p className="text-gray-600">If you don't like our API after your 2 week trial we guarantee a full refund.</p>
+              <p className="text-gray-600">If you do not like our API after your 2 week trial we guarantee a full refund.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-xl">
