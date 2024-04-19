@@ -31,7 +31,7 @@ const config: Config = {
       }, 
        gradientColorStops: theme => ({
        'center': '#faf4c7',  // Dark color for the center
-       'edges': '#FFF6FF',   // Light color for the edges
+       'edges': '#FCF8FD',   // Light color for the edges
      }),
     },
   },
