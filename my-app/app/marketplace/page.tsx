@@ -69,7 +69,7 @@ export default function Marketplace() {
             className=" p-2 border rounded text-gray-800"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-20">
           {filteredAPIs.map(api => (
             <APICard key={api.id} api={api} />
           ))}

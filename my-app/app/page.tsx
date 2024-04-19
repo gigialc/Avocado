@@ -90,7 +90,7 @@ export default function Home() {
       </div>
 
        {/* New Section inspired by the uploaded image */}
-       <div className="w-full max-w-5xl mx-auto my-5 p-10 text-center">
+       <div className="w-full max-w-5xl mx-auto my-5 p-10 pb-20 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-8">Get Set Up In No Time</h2>
           <p className="text-xl text-gray-700 mb-8">Get your unique API and start using  it in your health application.</p>
           
@@ -117,7 +117,6 @@ export default function Home() {
             Book a Demo
           </button>
         </div>
-
       </main>
       <Footer />
     </>
