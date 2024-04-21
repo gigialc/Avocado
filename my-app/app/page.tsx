@@ -28,7 +28,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-              Empowering health platforms with AI-driven content creation for faster, smarter, and cost-effective solutions.
+              Providing health platforms with AI-driven content creation for faster, smarter, and cost-effective solutions.
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
