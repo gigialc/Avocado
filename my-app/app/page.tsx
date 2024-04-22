@@ -28,7 +28,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                AI-Driven Content Creation for Healthcare Marketing
+              The WebMD for personalized healthcare content
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
