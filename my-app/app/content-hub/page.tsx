@@ -7,6 +7,7 @@ const Contribute = () => {
   const [output, setOutput] = React.useState('Output will be displayed here.');
   const [question, setQuestion] = React.useState('');
   const [apiUrl, setApiUrl] = React.useState('');
+  const [addPrompt, setAddPrompt] = React.useState('');
   const [loading, setLoading] = React.useState(false);
 
 
@@ -17,10 +18,10 @@ const Contribute = () => {
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({Query: question})
+      body: JSON.stringify({Query: question, Add_prompt: addPrompt})
     };
   
-    fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/5122', options)
+    fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/fertilitae', options)
       .then(response => response.json())
       .then(data => {
         console.log('data:', data)
@@ -58,6 +59,17 @@ const Contribute = () => {
             Activate
           </button>
         </div>
+        <p className="text-gray-900">Customize your answer</p> {/* New text field for Add_prompt */}
+          <div className="flex items-center space-x-4">
+            <input
+              type="text"
+              id="addPrompt"
+              value={addPrompt}
+              onChange={(e) => setAddPrompt(e.target.value)}
+              className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Add prompt"
+            />
+          </div>
       </div>
 
         <div className="flex flex-col items-center justify-center flex-grow bg-white w-full">
