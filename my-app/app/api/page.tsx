@@ -14,12 +14,19 @@ import Footer from '../components/footer';
       const [activeTab, setActiveTab] = useState('text');
       const [title, setTitle] = useState('');
       const [apiUrl, setApiUrl] = useState('');
+      const [apiCode, setApiCode] = useState('');
       const [apiResponse, setApiResponse] = useState('');
     
       const healthTopics = [
         'Menopause', 'Menstruation', 'Mental Health', 
         'Cardiovascular Health', 'Fertility', 'Pediatrics', 'Geriatrics', 'Nutrition'
       ];
+
+      const checkApiCode = () => {
+        if (apiCode === 'fertilitae001') {
+          setApiUrl('https://whispering-beyond-93204-750417d33585.herokuapp.com/add_fertilitae');
+        }
+      };
     
       const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
@@ -30,6 +37,7 @@ import Footer from '../components/footer';
       const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
+        checkApiCode();
         // Add your logic for API key generation or other actions here
         const options = {
           method: 'POST',
@@ -38,11 +46,11 @@ import Footer from '../components/footer';
         };
 
         try {
-          const response = await fetch('https://whispering-beyond-93204-750417d33585.herokuapp.com/add_text_chunks', options);
+          const response = await fetch(apiUrl, options);
           const data = await response.json();
           console.log('dataa:', data);
           if (data === true) {
-            setApiResponse('https://whispering-beyond-93204-750417d33585.herokuapp.com/5122');
+            setApiResponse('https://whispering-beyond-93204-750417d33585.herokuapp.com/fertilitae');
           }
         } catch (err) {
           console.error(err);
@@ -71,18 +79,21 @@ import Footer from '../components/footer';
               <h1 className="text-xl font-bold text-yellow-600 text-left">API Configuration</h1>
               <p className="text-left mb-4 pb-2 text-gray-900">Configure your API. Knowledge base is built from PubMed data only.</p>
               {/* add a field for entering your existing api endpoint */}
-              <div className=" w-full max-w-4xl rounded-lg pb-10">
-                  <p className="font-bold text-gray-900">Existing API Endpoint</p>
-                  <input
-
-                    type="text"
-                    id="apiUrl"
-                    value={apiUrl}
-                    onChange={(e) => setApiUrl(e.target.value)}
-                    className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="https://example.com/api"
-                  />
-                </div>
+              <div className="flex items-center space-x-4">
+                <input
+                  type="text"
+                  id="apiCode"
+                  value={apiCode}
+                  onChange={(e) => setApiCode(e.target.value)}
+                  className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="unique-code"
+                />
+                <button
+                  className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                >
+                  Activate
+                </button>
+              </div>
               
               <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
@@ -90,7 +101,7 @@ import Footer from '../components/footer';
                 <button onClick={() => setActiveTab('link')} className={`px-4 py-2 ${activeTab === 'link' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tr-lg`}>URLs</button>
               </div>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
+                {/* <div>
                   <label htmlFor="topic" className="block text-gray-700 text-sm font-bold mb-2">Choose a health topic:</label>
                   <select
                     id="topic"
@@ -103,7 +114,7 @@ import Footer from '../components/footer';
                       <option key={index} value={topic.toLowerCase().replace(/\s+/g, '_')}>{topic}</option>
                     ))}
                   </select>
-                </div>
+                </div> */}
 
                 <div>
                 <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
