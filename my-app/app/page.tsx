@@ -1,7 +1,5 @@
 'use client'
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { Analytics } from "@vercel/analytics/react"
@@ -31,7 +29,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-              AI Agents for Health Apps
+                AI chatbots for mobile health apps
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
