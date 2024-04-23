@@ -4,8 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import { Analytics } from "@vercel/analytics/react"
+
 
 export default function Home() {
+
 
   const handleDemoClick = () => {
     window.location.href = 'https://calendly.com/galcarazb/30min'; // Specify the URL
@@ -102,6 +105,7 @@ export default function Home() {
 
       </main>
       <Footer />
-    </>
+    <Analytics />   
+  </>
   );
 }
