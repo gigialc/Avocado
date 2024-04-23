@@ -28,7 +28,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-              AI healthcare marketer for consumer health apps
+              AI chatbots for consumer mobile health apps
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
