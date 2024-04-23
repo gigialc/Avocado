@@ -28,7 +28,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-              The WebMD for personalized healthcare content
+              Personalized healthcare content at scale.
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
