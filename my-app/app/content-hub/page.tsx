@@ -43,7 +43,7 @@ const Contribute = () => {
         <div className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5 p-4">
       <Navbar />
       <div className="max-w-4xl rounded-lg pb-10 pt-7">
-        <p className="text-gray-900">Enter API Endpoint</p>
+        <p className="text-gray-900">Enter your unique API Code</p>
         <div className="flex items-center space-x-4">
           <input
             type="text"
@@ -51,7 +51,7 @@ const Contribute = () => {
             value={apiUrl}
             onChange={(e) => setApiUrl(e.target.value)}
             className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="https://example.com/api"
+            placeholder="unique-code"
           />
           <button
             className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none"
