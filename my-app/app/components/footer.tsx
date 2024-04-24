@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
                         </Link>
                     </div>
                      <div className="space-x-4 flex">
-                        <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="hover:underline">
+                        {/* <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="hover:underline">
                             API Docs
-                        </Link>
+                        </Link> */}
                         {/* <Link href="/contribute" className="hover:underline">
                             Contribute
                         </Link> */}

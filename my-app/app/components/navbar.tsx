@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
               
               {/* Desktop Links */}
               <div className="hidden md:flex">
-                <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Docs</Link> 
+                {/* <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Docs</Link>  */}
                 <Link href="/api" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Configuration</Link>
                 <Link href="/marketplace" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Marketplace</Link>
                 <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 md:text-1xl dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Test API</Link> 
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
             {isOpen && (
               <div className="flex flex-col items-center md:flex-row md:mx-6">
                 <Link href="/" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Home</Link>
-                <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API Docs</Link>
+                {/* <Link href="https://healthbyte.mintlify.app/api-reference/introduction" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API Docs</Link> */}
                 <Link href="/api" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>API Configuration</Link>
                 <Link href="/marketplace" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Marketplace</Link>
                 <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 md:mx-4 md:my-0" onClick={() => setIsOpen(false)}>Try</Link>
