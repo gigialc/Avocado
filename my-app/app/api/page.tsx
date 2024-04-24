@@ -46,6 +46,7 @@ import Footer from '../components/footer';
         };
 
         try {
+          console.log('api', apiUrl)
           const response = await fetch(apiUrl, options);
           const data = await response.json();
           console.log('dataa:', data);
