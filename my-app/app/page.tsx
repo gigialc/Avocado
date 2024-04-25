@@ -29,10 +29,9 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                Low-hallucination customizable chatbot based on authoritative medical content.
+                Low-hallucination customizable medical chatbot
               </p>
-              <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                
+              <p className="text-2xl font-bold text-center text-gray-800 mb-6">   
               </p>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center ">
@@ -45,7 +44,6 @@ export default function Home() {
                   </svg>
                 </button> */}
               </div>
-
             </div>
         </div>
         <br></br>
