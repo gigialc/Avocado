@@ -29,7 +29,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                Personalized experiences for mobile health app users.
+                Low-hallucination chatbot based on authoritative medical content that you can load yourself.
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
