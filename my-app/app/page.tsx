@@ -29,7 +29,7 @@ export default function Home() {
               </p>
               </h1> 
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                Low-hallucination chatbot based on authoritative medical content that you can load yourself.
+                Low-hallucination customizable chatbot based on authoritative medical content.
               </p>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
                 
