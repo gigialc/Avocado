@@ -52,6 +52,7 @@ const Contribute = () => {
             onChange={(e) => setApiUrl(e.target.value)}
             className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="unique-code"
+            style={{ borderRadius: '10px',backgroundColor: 'transparent' }} 
           />
           <button
             className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none"
@@ -67,29 +68,30 @@ const Contribute = () => {
               value={addPrompt}
               onChange={(e) => setAddPrompt(e.target.value)}
               className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              style={{ borderRadius: '10px',backgroundColor: 'transparent' }} 
               placeholder="Add prompt"
             />
           </div>
       </div>
 
-        <div className="flex flex-col items-center justify-center flex-grow bg-white w-full">
+        <div className="flex flex-col items-center justify-center flex-grow w-full">
             {loading && 
               <div className="loader"></div>
             }
           <textarea 
-            className="w-full flex-1 bg-transparent text-black resize-none"
+            className="w-full flex-1 bg-transparent text-black resize-none p-2"
             readOnly
             value={output}
             style={{ maxHeight: 'calc(100vh - 150px)', overflowY: 'auto' }}
           ></textarea>
           </div>
-          <div className="w-full px-4 py-2 border-t sticky bottom-0">
 
             <div className="flex justify-between items-center border-gray ">
               <textarea 
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                className="flex-grow p-2 border rounded-l text-gray-900 focus:outline-none resize-vertical min-h-[50px] max-h-[150px]"
+                className="flex-grow p-2 border rounded-l text-gray-900 focus:outline-none resize-vertical min-h-[50px] max-h-[150px] p-2"
+                style={{ borderRadius: '20px' }} 
                 placeholder="Ask avocado health..."
               ></textarea>
               <button 
@@ -100,7 +102,7 @@ const Contribute = () => {
               </button>
             </div>
           </div>
-        </div>
+    
     </>
   );
 };
