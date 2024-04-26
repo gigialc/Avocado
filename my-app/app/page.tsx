@@ -64,9 +64,9 @@ export default function Home() {
           </div>
 
           <div className="bg-white shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between">
-              <h3 className="text-lg font-bold text-purple-700 text-center">Scalability</h3>
+              <h3 className="text-lg font-bold text-purple-700 text-center">Compliant</h3>
               <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
-                  Power any health app with our API accross multiple platforms.
+                  Compliant with the latest HIPAA, GDPR and FDA regulations.
               </p>
           </div>
       </div>
