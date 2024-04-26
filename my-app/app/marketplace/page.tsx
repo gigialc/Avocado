@@ -18,28 +18,28 @@ const apiData = [
       name: "Reproductive Health", 
       description: "Focused on fertility and reproductive health analytics, this API utilizes data from clinical studies on hormone levels, treatment outcomes, and lifestyle factors to provide insights for healthcare providers.", 
       creator: "HealthByte Labs",
-      price: "$0.1 per call" 
+      price: "$100/month" 
     },
     { 
       id: 3, 
       name: "Mental Health Tracking", 
       description: "Leveraging natural language processing and sentiment analysis, this API tracks mental health by analyzing patient journals and therapy session transcripts to offer predictive insights into mood disorders and treatment effectiveness.", 
       creator: "HealthByte Labs",
-      price: "$0.1 per call" 
+      price: "$100/month" 
     },
     { 
       id: 4, 
       name: "Diabetes Management", 
       description: "This API supports diabetes management through continuous glucose monitoring data analysis, providing personalized recommendations for insulin dosage and lifestyle adjustments based on machine learning models.", 
       creator: "HealthByte Labs",
-      price: "$0.1 per call" 
+      price: "$100/month" 
     },
     { 
       id: 5, 
       name: "Oncology Informatics", 
       description: "Using data from genomic sequencing and clinical trials, this API provides oncology informatics for targeted cancer therapies and prognostics, helping oncologists devise personalized treatment plans.", 
       creator: "HealthByte Labs",
-      price: "$0.1 per call" 
+      price: "$100/month" 
     }
   ];
 
@@ -60,6 +60,7 @@ export default function Marketplace() {
       <Navbar />
       <div className="container mx-auto px-4">
         <h1 className="text-xl font-bold text-center my-6 text-gray-700">API Marketplace</h1>
+        <p className="text-center text-gray-600 mb-8">Coming soon: A marketplace for APIs to support your healthcare applications. Check back for updates!</p>
         <div className="mb-6">
           <input
             type="text"

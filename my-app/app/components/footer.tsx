@@ -25,6 +25,9 @@ const Footer: React.FC = () => {
                          <Link href="/marketplace" className="hover:underline">
                          Marketplace 
                          </Link>   
+                         <Link href="/content-hub" className="hover:underline">
+                         Test API 
+                         </Link>   
                     </div> 
                     <div>
                         <a href="mailto:jricramc@mit.edu, galcaraz@bu.edu" className="hover:underline">
