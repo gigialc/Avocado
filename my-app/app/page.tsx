@@ -74,7 +74,7 @@ export default function Home() {
             <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
             </svg>
-            <span className="ml-4 text-gray-700 font-bold">Personalized</span>
+            <span className="ml-4 text-gray-700 font-bold">Personalization</span>
           </div>
         </div>
         
