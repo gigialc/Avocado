@@ -48,7 +48,7 @@ export default function Home() {
         </div>
         <br></br>
       
-        <div className="flex justify-center space-x-4 pt-10">
+        <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 pt-10">
           <div className="flex items-center">
             <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
