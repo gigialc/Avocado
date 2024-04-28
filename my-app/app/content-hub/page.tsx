@@ -69,7 +69,7 @@ const Contribute = () => {
               onChange={(e) => setAddPrompt(e.target.value)}
               className="shadow border rounded flex-grow py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               style={{ borderRadius: '10px',backgroundColor: 'transparent' }} 
-              placeholder="Add prompt"
+              placeholder="Write this for a woman in her 40s and has a low education level"
             />
           </div>
       </div>

@@ -48,30 +48,39 @@ export default function Home() {
         </div>
         <br></br>
       
-        <div className="flex flex-wrap justify-center items-stretch mt-12 gap-4">
-          <div className="bg-white shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between ">
-              <h3 className="text-lg font-bold text-purple-700 text-center">Accuracy</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
-              Backed by the latest medical research for trustworthy content.
-              </p>
+        <div className="flex justify-center space-x-4 pt-10">
+          <div className="flex items-center">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Compliance</span>
           </div>
 
-          <div className="bg-white shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between">
-              <h3 className="text-lg font-bold text-purple-700 text-center">Transparency</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
-                  Every output provides citations and references to the original data sources.
-              </p>
+          <div className="flex items-center">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Accuracy</span>
           </div>
 
-          <div className="bg-white shadow-xl rounded-lg p-4 w-full sm:w-64 flex flex-col justify-between">
-              <h3 className="text-lg font-bold text-purple-700 text-center">Compliant</h3>
-              <p className="text-sm text-gray-700 mt-2 flex-grow text-center">
-                  Compliant with the latest HIPAA, GDPR and FDA regulations.
-              </p>
+          <div className="flex items-center">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Medical References</span>
           </div>
-      </div>
+
+          <div className="flex items-center">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Personalized</span>
+          </div>
+        </div>
+        
+      
       <div className="w-full max-w-5xl mt-52 pb-32">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">Revolutionizing health content with AI, boosting efficiency by up to 50% and speeding delivery by 20%.</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">Revolutionizing health content writing with AI, boosting efficiency by up to 50% and speeding delivery by 20%.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             <div className="py-5 px-4">
               <p className="text-5xl font-bold text-purple-700 py-3">20%↑</p>
