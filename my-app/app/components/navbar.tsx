@@ -37,6 +37,7 @@ const Navbar: React.FC = () => {
                 <Link href="/api" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">API Configuration</Link>
                 <Link href="/marketplace" className="md:text-1xl my-1 text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Marketplace</Link>
                 <Link href="/content-hub" className="my-1 text-sm font-medium text-gray-900 md:text-1xl dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Test API</Link> 
+                <a href="https://join.slack.com/t/avocadohealth-ai/shared_invite/zt-2gf0efdwn-Pfc9dwWT83aKHufeNNI5zA" className="my-1 text-sm font-medium text-gray-900 md:text-1xl dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4 my-0">Slack</a>
               </div>
             </div>
     
