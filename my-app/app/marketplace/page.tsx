@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '../components/navbar';
 import APICard from '../components/apicard'; 
 import Footer from '../components/footer';
+import LoginNavbar from '../components/loginnavbar';
 
 const apiData = [
     { 
@@ -57,7 +58,7 @@ export default function Marketplace() {
   return (
     <>
      <div className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5 p-4">
-      <Navbar />
+      <LoginNavbar />
       <div className="container mx-auto px-4">
         <h1 className="text-xl font-bold text-center my-6 text-gray-700">API Marketplace</h1>
         <p className="text-center text-gray-600 mb-8">Coming soon: A marketplace for APIs to support your healthcare applications. Check back for updates!</p>

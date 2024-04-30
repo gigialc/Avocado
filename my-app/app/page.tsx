@@ -3,11 +3,10 @@ import React from 'react';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { Analytics } from "@vercel/analytics/react"
+import { useAuth } from '../authContext';
 
 
 export default function Home() {
-
-
   const handleDemoClick = () => {
     window.location.href = 'https://calendly.com/galcarazb/30min'; // Specify the URL
   };

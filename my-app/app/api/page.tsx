@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import LoginNavbar from '../components/loginnavbar';
 
 // use client
     export default function APIPage() {
@@ -74,7 +75,7 @@ import Footer from '../components/footer';
       return (
         <>
         <div className=" bg-radial-gradient from-center to-edges sm:p-5 p-4 ">
-          <Navbar/>
+        <LoginNavbar />
           <div className="flex flex-col items-center min-h-screen pt-20 "> 
             <div className="w-full max-w-4xl rounded-lg">
               <h1 className="text-xl font-bold text-yellow-600 text-left">API Configuration</h1>
