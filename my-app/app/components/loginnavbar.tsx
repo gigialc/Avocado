@@ -39,9 +39,7 @@ const LoginNavbar: React.FC = () => {
                     </div>
 
                     <div className="hidden md:flex items-center">
-                        <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">API Configuration</Link>
-                        <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Marketplace</Link>
-                        <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Test API</Link> 
+                      
 
                         <div className="relative">
                             <button onClick={toggleDropdown} className="flex items-center focus:outline-none">
@@ -50,6 +48,9 @@ const LoginNavbar: React.FC = () => {
                             {isDropdownOpen && (
                                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
                                     {/* <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</Link> */}
+                                    <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">API Configuration</Link>
+                                    <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Marketplace</Link>
+                                    <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Test API</Link> 
                                     <Link href="/" className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</Link>
                                 </div>
                             )}
