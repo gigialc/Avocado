@@ -8,6 +8,7 @@ import { FaAngleLeft } from 'react-icons/fa6';
 
 export default function SignUpPage() {
 	// redirect to login page
+	const [successMessage, setSuccessMessage] = React.useState('');
 	const router = useRouter();
 
 	const [user, setUser] = React.useState({
@@ -23,10 +24,13 @@ export default function SignUpPage() {
 	const onSignUp = async () => {
 		try {
 			setLoading(true);
-
+	
 			const response = await axios.post('/auth_backend/signup', user);
-			console.log('signup okay', response.data);
-			router.push('/login');
+			console.log('Signup successful', response.data);
+			setSuccessMessage('Account created successfully! Please log in.');
+			setTimeout(() => {
+				router.push('/login');
+			}, 3000); // Redirect after 3 seconds to give user time to read the message
 		} catch (error: any) {
 			console.log('Failed to sign up the user', error.message);
 		} finally {
@@ -56,6 +60,11 @@ export default function SignUpPage() {
 				
 				</span>
 			</h1>
+			{successMessage && (
+			<div className="mb-4 text-green-600 font-bold">
+				{successMessage}
+			</div>
+		)}
 
 			<input
 				className="w-[350px] text-slate-800 p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
