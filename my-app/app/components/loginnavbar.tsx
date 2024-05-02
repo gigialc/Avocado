@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import navigate from 'next/router';
-import { UserCircleIcon } from '@heroicons/react/20/solid';
+import { useRouter } from 'next/router'; // corrected the import for using next/router
+import { UserCircleIcon } from '@heroicons/react/20/solid'; // Ensure this import path is correct
 
 const LoginNavbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // Mock state to manage login status
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -14,11 +13,6 @@ const LoginNavbar: React.FC = () => {
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    const handleLogout = () => {
-        setIsLoggedIn(false);
-        navigate.push('/');
     };
 
     return (
@@ -32,26 +26,23 @@ const LoginNavbar: React.FC = () => {
                                 {isOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                 ) : (
-                                    <path fillRule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2z"></path>
+                                    <path fillRule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4 a1 1 0 110-2z"></path>
                                 )}
                             </svg>
                         </button>
                     </div>
 
                     <div className="hidden md:flex items-center">
-                      
-
                         <div className="relative">
-                            <button onClick={toggleDropdown} className="flex items-center focus:outline-none">
-                                <UserCircleIcon className="h-8 w-8 text-gray-800 dark:text-gray-800" />
-                            </button>
+                        <button onClick={toggleDropdown} className="flex items-center focus:outline-none">
+                            <UserCircleIcon className="h-8 w-8 text-gray-800 dark:text-gray-800" />
+                        </button>
                             {isDropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                                    {/* <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</Link> */}
-                                    <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">API Configuration</Link>
-                                    <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Marketplace</Link>
-                                    <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Test API</Link> 
-                                    <Link href="/" className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</Link>
+                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                                    <Link href="/api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">API Configuration</Link>
+                                    <Link href="/marketplace" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Marketplace</Link>
+                                    <Link href="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Test API</Link>
+                                    <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</Link>
                                 </div>
                             )}
                         </div>
@@ -72,3 +63,4 @@ const LoginNavbar: React.FC = () => {
 };
 
 export default LoginNavbar;
+
