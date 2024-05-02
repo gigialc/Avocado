@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
               {/* <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">API Configuration</Link> */}
               {/* <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Marketplace</Link> */}
               {/* <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Test API</Link>  */}
-              <a href="https://join.slack.com/t/avocadohealth-ai/shared_invite/zt-2gf0efdwn-Pfc9dwWT83aKHufeNNI5zA" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Slack</a>
+              {/* <a href="https://join.slack.com/t/avocadohealth-ai/shared_invite/zt-2gf0efdwn-Pfc9dwWT83aKHufeNNI5zA" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Community</a> */}
               <Link href="/login" className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mx-2">Sign In</Link>
               <Link href="/sign-up" className="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded mx-2">Sign Up</Link>
             </div>
