@@ -26,7 +26,7 @@ export default function Home() {
                 avocado health
               </h1>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                Low-hallucination customizable medical ai chatbots
+                Hallucination-free AI for health. Safe, compliant, and accurate.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
                 <button 
@@ -68,8 +68,37 @@ export default function Home() {
               <span className="ml-4 text-gray-700 font-bold">Personalization</span>
             </div>
           </div>
-        
-          <div className="w-full max-w-5xl mt-52 pb-32">
+
+
+          <div className="flex flex-col items-center justify-center w-full my-10 mt-40">
+          <h2 className="text-4xl font-bold mb-8 text-black text-center">
+            GPT-4 vs. Avocado
+          </h2>
+          <p className="text-base mb-8 text-black text-center px-4">
+            GPT-4 is a powerful AI language model, but it's not designed for healthcare. Avocado Health is a customizable AI chatbot that's specifically trained for medical conversations.
+          </p>
+          <div className="grid grid-cols-2 gap-4 px-6 w-full">
+            <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
+              <div className="bg-gray-200 p-4 bg-yellow-500">
+                <h1 className="font-bold text-black text-center text-2xl">GPT-4</h1>
+              </div>
+              <div className="mt-4 text-black">
+                <p>TikTok, the short video platform that has gained worldwide popularity in recent years, has been accused of copying the social video app BeReal.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
+              <div className="bg-gray-200 p-4 bg-yellow-500">
+                <h1 className="font-bold text-black text-center text-2xl">Avocado 🥑</h1>
+              </div>
+              <div className="mt-4 text-black">
+                <p>Social networks continue to evolve, and companies like TikTok and BeReal are creating new ways of interaction for users. However, the new application on the market can be more of a duplication than an original idea.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <div className="w-full max-w-5xl mt-40 pb-32">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">
               Revolutionizing health content writing with AI, boosting efficiency by up to 50% and speeding delivery by 20% 🥑
             </h2>
@@ -89,6 +118,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
 
         <div className="flex flex-col justify-center items-center w-full mx-auto text-center pb-40">
           <h2 className="text-4xl font-bold mb-8 text-black">Effortless Setup in Minutes</h2>
