@@ -58,7 +58,7 @@ const LoginNavbar: React.FC = () => {
                         <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Marketplace</Link>
                         <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Try</Link>
                             
-                        <button onClick={handleLogout} className=" text-black font-bold py-2 px-4 rounded my-2">Logout</button>
+                        <Link href="/" className=" text-black font-bold py-2 px-4 rounded my-2">Logout</Link>
                         
                         
                     </div>
