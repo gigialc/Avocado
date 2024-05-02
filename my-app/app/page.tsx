@@ -26,7 +26,7 @@ export default function Home() {
                 avocado health
               </h1>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-                Hallucination-free AI for health. Safe, compliant, and accurate.
+                Hallucination-free AI for healthcare
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
                 <button 
