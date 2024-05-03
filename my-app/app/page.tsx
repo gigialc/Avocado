@@ -83,16 +83,31 @@ export default function Home() {
                 <h1 className="font-bold text-black text-center text-2xl">GPT-4</h1>
               </div>
               <div className="mt-4 text-black">
-                <p>TikTok, the short video platform that has gained worldwide popularity in recent years, has been accused of copying the social video app BeReal.</p>
-              </div>
+              <ul className="">
+                <li className='font-bold mb-5'>Can I use my ABRILADA pen straight from the refrigerator?
+                </li>
+                 <li>
+                 Yes, you can use your ABRILADA pen straight from the refrigerator, but it is generally recommended to allow the pen to warm to room temperature before injection. This can make the injection process more comfortable and reduce discomfort at the injection site.
+               </li>
+              </ul>
+            </div>
             </div>
             <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
               <div className="bg-gray-200 p-4 bg-yellow-500">
                 <h1 className="font-bold text-black text-center text-2xl">Avocado 🥑</h1>
               </div>
               <div className="mt-4 text-black">
-                <p>Social networks continue to evolve, and companies like TikTok and BeReal are creating new ways of interaction for users. However, the new application on the market can be more of a duplication than an original idea.</p>
-              </div>
+              <ul className="">
+                <li className='font-bold mb-5'>Can I use my ABRILADA pen straight from the refrigerator?
+                </li>
+                 <li className='mb-4'>
+                 Yes, however you may find that using the prefilled syringe at room temperature reduces stinging or discomfort. If you allow your prefilled syringe to reach room temperature before use, you must keep it away from direct sunlight as this can damage your medicine.
+                 </li>
+                 <li>Click
+                  <a href="https://www.pfizermedicalinformation.com/patient/abrilada" className="text-blue-500 hover:text-blue-700" target="_blank"> here</a> to find the full guide.
+                </li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
@@ -100,16 +115,16 @@ export default function Home() {
 
           <div className="w-full max-w-5xl mt-40 pb-32">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">
-              Revolutionizing health content writing with AI, boosting efficiency by up to 50% and speeding delivery by 20% 🥑
+              Revolutionizing patient education with AI 🥑
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="py-5 px-4">
-                <p className="text-5xl font-bold text-purple-700 py-3">20%↑</p>
-                <p className="text-xl text-gray-600">Pipeline velocity</p>
+                <p className="text-5xl font-bold text-purple-700 py-3">70%↑</p>
+                <p className="text-xl text-gray-600">Delivery speed</p>
               </div>
               <div className="py-5 px-4">
-                <p className="text-5xl font-bold text-purple-700 py-3">50%↓</p>
-                <p className="text-xl text-gray-600">Content creation costs</p>
+                <p className="text-5xl font-bold text-purple-700 py-3">50%↑</p>
+                <p className="text-xl text-gray-600">Engagement</p>
               </div>
               <div className="py-5 px-4">
                 <p className="text-5xl font-bold text-purple-700 py-3">100%</p>
