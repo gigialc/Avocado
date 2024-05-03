@@ -124,7 +124,7 @@ import LoginNavbar from '../components/loginnavbar';
                 onChange={() => handleSourceChange('pubmed')}
                 className="mr-2"
               />
-              PubMed
+              PubMedf
               <input
                 type="checkbox"
                 checked={sources.cdc}
@@ -176,6 +176,9 @@ import LoginNavbar from '../components/loginnavbar';
             <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Submit
             </button>
+          
+          <Link href="/content-hub" className="text-blue-500 hover:underline block my-4">Generate Content</Link>
+
           </form>
               {message && (
             <div className="text-center mt-4">
