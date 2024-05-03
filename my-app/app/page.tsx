@@ -75,7 +75,7 @@ export default function Home() {
             GPT-4 vs. Avocado
           </h2>
           <p className="text-base mb-8 text-black text-center px-4">
-            GPT-4 is a powerful AI language model, but it's not designed for healthcare. Avocado Health is a customizable AI chatbot that's specifically trained for medical conversations.
+            GPT-4 is a powerful AI language model, but it is not designed for healthcare. Avocado Health is a customizable AI chatbot that is specifically trained for medical conversations.
           </p>
           <div className="grid grid-cols-2 gap-4 px-6 w-full">
             <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
