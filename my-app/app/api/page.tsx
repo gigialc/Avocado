@@ -91,8 +91,8 @@ import LoginNavbar from '../components/loginnavbar';
         <LoginNavbar />
           <div className="flex flex-col items-center min-h-screen pt-20 "> 
             <div className="w-full max-w-4xl rounded-lg">
-              <h1 className="text-xl font-bold text-yellow-600 text-left">Output Configuration</h1>
-              <p className="text-left mb-4 pb-2 text-gray-900">Configure your output. Add the articles and health information that you want your AI to generate information from.</p>
+              <h1 className="text-xl font-bold text-yellow-600 text-left">Medical Knowledge Base</h1>
+              <p className="text-left mb-4 pb-2 text-gray-900">Configure your output. How do you want the output to look like, what data sources would you like to use and topics.</p>
               {/* add a field for entering your existing api endpoint */}
               {/* <div className="flex items-center space-x-4 mb-4">
                 <input
@@ -194,6 +194,7 @@ import LoginNavbar from '../components/loginnavbar';
                 </div> */}
 
                 <h1 className="text-xl font-bold text-yellow-600 text-left pt-20">Add your own articles and resources (optional)</h1>
+                <p className="text-left mb-4 pb-2 text-gray-900">Add your own articles and resources to the knowledge base. This will help the AI generate better answers.</p>
                 <div>
                 <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
                 <input
@@ -209,11 +210,12 @@ import LoginNavbar from '../components/loginnavbar';
                   <div>
                     <label htmlFor="inputText" className="block text-gray-700 text-sm font-bold mb-2">Enter text:</label>
                     <textarea
-                      id="inputText"
-                      value={inputText}
-                      onChange={(e) => setInputText(e.target.value)}
-                      className="shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                      placeholder="Paste your text here"
+                       id="inputText"
+                       value={inputText}
+                       onChange={(e) => setInputText(e.target.value)}
+                       className="shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                       placeholder="Paste your text here"
+                       rows={15} 
                     />
                   </div>
                 )}

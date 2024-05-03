@@ -44,8 +44,8 @@ const Contribute = () => {
         <div className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5 p-4">
         <LoginNavbar />
       <div className="max-w-4xl rounded-lg pb-10 pt-7">
-        <p className="text-gray-900">Enter your unique API Code</p>
-        <div className="flex items-center space-x-4">
+        {/* <p className="text-gray-900">Enter your unique API Code</p> */}
+        {/* <div className="flex items-center space-x-4">
           <input
             type="text"
             id="apiUrl"
@@ -60,7 +60,7 @@ const Contribute = () => {
           >
             Activate
           </button>
-        </div>
+        </div> */}
         <p className="text-gray-900">Customize your answer</p> {/* New text field for Add_prompt */}
           <div className="flex items-center space-x-4">
             <input
