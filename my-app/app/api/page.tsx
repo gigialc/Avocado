@@ -50,18 +50,18 @@ import LoginNavbar from '../components/loginnavbar';
     
       const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
-        checkApiCode();
+        // console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
+        // checkApiCode();
         // Add your logic for API key generation or other actions here
         const options = {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({text: inputText, title: title})
+          body: JSON.stringify({keywords: [topicKeywords]})
         };
 
         try {
-          console.log('api', apiUrl)
-          const response = await fetch(apiUrl, options);
+          // console.log('api', apiUrl)
+          const response = await fetch('https://avocado-backend-dtfu.onrender.com/scrape_pubmed', options);
           const data = await response.json();
           console.log('dataa:', data);
           if (data === true) {
@@ -169,9 +169,11 @@ import LoginNavbar from '../components/loginnavbar';
             </select>
           </div>
 
-          <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Submit
-                </button>
+          <form onSubmit={handleSubmit}>
+            <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Submit
+            </button>
+          </form>
               {/* <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
