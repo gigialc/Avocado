@@ -8,6 +8,8 @@ import LoginNavbar from '../components/loginnavbar';
 // use client
     export default function APIPage() {
       const [topic, setTopic] = useState('');
+      const [message, setMessage] = useState('');
+
       const [inputText, setInputText] = useState('');
       const [file, setFile] = useState<File | null>(null);
       const [links, setLinks] = useState<string[]>([]); // Array of strings for URLs
@@ -65,7 +67,8 @@ import LoginNavbar from '../components/loginnavbar';
           const data = await response.json();
           console.log('dataa:', data);
           if (data === true) {
-            setApiResponse('https://whispering-beyond-93204-750417d33585.herokuapp.com/fertilitae');
+            // setApiResponse('https://whispering-beyond-93204-750417d33585.herokuapp.com/fertilitae');
+            setMessage('Database successfully updated!');
           }
         } catch (err) {
           console.error(err);
@@ -174,6 +177,12 @@ import LoginNavbar from '../components/loginnavbar';
               Submit
             </button>
           </form>
+              {message && (
+            <div className="text-center mt-4">
+              <p className="text-green-500">{message}</p>
+            </div>
+          )}
+
               {/* <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
