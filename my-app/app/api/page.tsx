@@ -169,6 +169,9 @@ import LoginNavbar from '../components/loginnavbar';
             </select>
           </div>
 
+          <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                  Submit
+                </button>
               {/* <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
@@ -190,6 +193,7 @@ import LoginNavbar from '../components/loginnavbar';
                   </select>
                 </div> */}
 
+                <h1 className="text-xl font-bold text-yellow-600 text-left pt-20">Add your own articles and resources (optional)</h1>
                 <div>
                 <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
                 <input
@@ -239,7 +243,7 @@ import LoginNavbar from '../components/loginnavbar';
                       <button type="button" onClick={handleAddLink} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
                     </div>
                     {links.map((link, index) => (
-                      <div key={index} className="flex justify-between items-center p-2 bg-gray-400 rounded mt-2">
+                      <div key={index} className="flex justify-between items-center p-2 bg-gray-400 rounded mt-2 pb-40">
                         <span>{link}</span>
                         <button onClick={() => handleRemoveLink(index)} className="text-red-500 hover:text-red-700">Remove</button>
                       </div>
@@ -247,20 +251,24 @@ import LoginNavbar from '../components/loginnavbar';
                   </div>
                 )}
                 <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Add to API
+                  Add
                 </button>
               </form>
               {apiResponse && (
-                <div className="text-center mt-4">
+                <div className="text-center mt-4 mb-30">
                   <p className="text-blue-500">It has been added! - API URL:</p>
                   <a href={apiResponse} target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">{apiResponse}</a>
                 </div>
-              )}
-
+                )}
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             </div>
           </div>
         
         </div>
+      
         <Footer/>
           {/* <Link href="/api-marketplace" className="text-blue-500 hover:underline block text-center my-4">Go to API Marketplace</Link> */}
         </>
