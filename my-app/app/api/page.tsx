@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import LoginNavbar from '../components/loginnavbar';
 
 // use client
     export default function APIPage() {
@@ -15,8 +16,16 @@ import Footer from '../components/footer';
       const [title, setTitle] = useState('');
       const [apiUrl, setApiUrl] = useState('');
       const [apiCode, setApiCode] = useState('');
-      const [apiResponse, setApiResponse] = useState('');
+      const [apiResponse, setApiResponse] = useState('')
+        const [sources, setSources] = useState({
+          pubmed: false,
+          cdc: false,
+          fda: false
+        });
+        const [topicKeywords, setTopicKeywords] = useState('');
+        const [outputFormat, setOutputFormat] = useState('');;
     
+      
       const healthTopics = [
         'Menopause', 'Menstruation', 'Mental Health', 
         'Cardiovascular Health', 'Fertility', 'Pediatrics', 'Geriatrics', 'Nutrition'
@@ -27,6 +36,11 @@ import Footer from '../components/footer';
           setApiUrl('https://whispering-beyond-93204-750417d33585.herokuapp.com/add_fertilitae');
         }
       };
+
+      const handleSourceChange = (source: 'pubmed' | 'cdc' | 'fda') => {
+        setSources(prev => ({ ...prev, [source]: !prev[source] }));
+      };
+  
     
       const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
@@ -74,13 +88,13 @@ import Footer from '../components/footer';
       return (
         <>
         <div className=" bg-radial-gradient from-center to-edges sm:p-5 p-4 ">
-          <Navbar/>
+        <LoginNavbar />
           <div className="flex flex-col items-center min-h-screen pt-20 "> 
             <div className="w-full max-w-4xl rounded-lg">
-              <h1 className="text-xl font-bold text-yellow-600 text-left">API Configuration</h1>
-              <p className="text-left mb-4 pb-2 text-gray-900">Configure your API. Add the articles and health information that you want your AI to generate information from.</p>
+              <h1 className="text-xl font-bold text-yellow-600 text-left">Medical Knowledge Base</h1>
+              <p className="text-left mb-4 pb-2 text-gray-900">Configure your output. How do you want the output to look like, what data sources would you like to use and topics.</p>
               {/* add a field for entering your existing api endpoint */}
-              <div className="flex items-center space-x-4 mb-4">
+              {/* <div className="flex items-center space-x-4 mb-4">
                 <input
                   type="text"
                   id="apiCode"
@@ -94,8 +108,70 @@ import Footer from '../components/footer';
                 >
                   Activate
                 </button>
-              </div>
+              </div> */}
               
+              <div className="mb-4">
+            <label className="text-gray-700 text-sm font-bold mb-2">
+              Sources of Information:
+            </label>
+            <div className="flex items-center mb-2 text-black">
+              <input
+                type="checkbox"
+                checked={sources.pubmed}
+                onChange={() => handleSourceChange('pubmed')}
+                className="mr-2"
+              />
+              PubMed
+              <input
+                type="checkbox"
+                checked={sources.cdc}
+                onChange={() => handleSourceChange('cdc')}
+                className="mr-2 ml-4"
+              />
+              CDC
+              <input
+                type="checkbox"
+                checked={sources.fda}
+                onChange={() => handleSourceChange('fda')}
+                className="mr-2 ml-4"
+              />
+              FDA
+            </div>
+          </div>
+
+          <div className="mb-4">
+            <label className="text-gray-700 text-sm font-bold mb-2">
+              Topic Keywords:
+            </label>
+            <input
+              type="text"
+              value={topicKeywords}
+              onChange={(e) => setTopicKeywords(e.target.value)}
+              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Enter topic keywords"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="text-gray-700 text-sm font-bold mb-2">
+              Output Format:
+            </label>
+            <select
+              value={outputFormat}
+              onChange={(e) => setOutputFormat(e.target.value)}
+              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            >
+              <option value="">Select Format</option>
+              <option value="bullet_points">Bullet Points</option>
+              <option value="blog_format">Blog Format</option>
+              <option value="article">Article</option>
+              <option value="paragraph">Paragraph</option>
+            </select>
+          </div>
+
+          <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                  Submit
+                </button>
               {/* <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
@@ -117,6 +193,8 @@ import Footer from '../components/footer';
                   </select>
                 </div> */}
 
+                <h1 className="text-xl font-bold text-yellow-600 text-left pt-20">Add your own articles and resources (optional)</h1>
+                <p className="text-left mb-4 pb-2 text-gray-900">Add your own articles and resources to the knowledge base. This will help the AI generate better answers.</p>
                 <div>
                 <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Enter title:</label>
                 <input
@@ -132,11 +210,12 @@ import Footer from '../components/footer';
                   <div>
                     <label htmlFor="inputText" className="block text-gray-700 text-sm font-bold mb-2">Enter text:</label>
                     <textarea
-                      id="inputText"
-                      value={inputText}
-                      onChange={(e) => setInputText(e.target.value)}
-                      className="shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                      placeholder="Paste your text here"
+                       id="inputText"
+                       value={inputText}
+                       onChange={(e) => setInputText(e.target.value)}
+                       className="shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                       placeholder="Paste your text here"
+                       rows={15} 
                     />
                   </div>
                 )}
@@ -166,7 +245,7 @@ import Footer from '../components/footer';
                       <button type="button" onClick={handleAddLink} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
                     </div>
                     {links.map((link, index) => (
-                      <div key={index} className="flex justify-between items-center p-2 bg-gray-400 rounded mt-2">
+                      <div key={index} className="flex justify-between items-center p-2 bg-gray-400 rounded mt-2 pb-40">
                         <span>{link}</span>
                         <button onClick={() => handleRemoveLink(index)} className="text-red-500 hover:text-red-700">Remove</button>
                       </div>
@@ -174,20 +253,24 @@ import Footer from '../components/footer';
                   </div>
                 )}
                 <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Add to API
+                  Add
                 </button>
               </form>
               {apiResponse && (
-                <div className="text-center mt-4">
+                <div className="text-center mt-4 mb-30">
                   <p className="text-blue-500">It has been added! - API URL:</p>
                   <a href={apiResponse} target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">{apiResponse}</a>
                 </div>
-              )}
-
+                )}
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             </div>
           </div>
         
         </div>
+      
         <Footer/>
           {/* <Link href="/api-marketplace" className="text-blue-500 hover:underline block text-center my-4">Go to API Marketplace</Link> */}
         </>

@@ -5,9 +5,12 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { FaAngleLeft } from 'react-icons/fa6';
+import { useState } from 'react';
 
 export default function LoginPage() {
 	const router = useRouter();
+    const [errorMessage, setErrorMessage] = useState('')
+
 
 	const [user, setUser] = React.useState({
 		email: '',
@@ -25,7 +28,9 @@ export default function LoginPage() {
 			console.log('Login successful', response.data);
 			router.push('/api');
 		} catch (error: any) {
-			console.log('Login failed', error.message);
+			const message = error.response?.data?.message || 'Email or password incorrect, please try again.';
+			setErrorMessage(message); // Set the error message state
+			console.log('Login failed', message);
 		} finally {
 			setLoading(false);
 		}
@@ -65,11 +70,18 @@ export default function LoginPage() {
 				placeholder="Your Password..."
 			/>
 
+				{errorMessage && (
+					<div className="text-red-500 text-sm mt-2 mb-2">
+						{errorMessage}
+					</div>
+				)}
+
 			<button
 				onClick={onLogin}
 				className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600 uppercase px-40 py-3 mt-10 font-bold text-black">
 				Login
 			</button>
+		
 
 			<Link href="/sign-up">
 				<p className="mt-10 text-black">
@@ -85,6 +97,7 @@ export default function LoginPage() {
 					<FaAngleLeft className="inline mr-1 text-black" /> Back to the Homepage
 				</p>
 			</Link>
+			
 		</div>
 	);
 }

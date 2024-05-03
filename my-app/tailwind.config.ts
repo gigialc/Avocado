@@ -30,8 +30,8 @@ const config: Config = {
         'radial-gradient': "radial-gradient(circle 500px, var(--tw-gradient-stops))",
       }, 
        gradientColorStops: theme => ({
-       'center': '#FfFFff',  // Dark color for the center
-       'edges': "#FCFFFB",
+        'center': '#F1FFEB',  // Dark color for the center
+        'edges': '#faf7ff',  
        
      }),
     },

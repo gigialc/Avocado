@@ -30,23 +30,28 @@ const Navbar: React.FC = () => {
             
             {/* Desktop Links and Buttons, aligned to the right */}
             <div className="hidden md:flex items-center">
-              <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">API Configuration</Link>
-              <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Marketplace</Link>
-              <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Test API</Link> 
-              <a href="https://join.slack.com/t/avocadohealth-ai/shared_invite/zt-2gf0efdwn-Pfc9dwWT83aKHufeNNI5zA" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Slack</a>
+              {/* <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">API Configuration</Link> */}
+              {/* <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Marketplace</Link> */}
+              {/* <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Test API</Link>  */}
+              {/* <a href="https://join.slack.com/t/avocadohealth-ai/shared_invite/zt-2gf0efdwn-Pfc9dwWT83aKHufeNNI5zA" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-purple-800 mx-4">Community</a> */}
               <Link href="/login" className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mx-2">Sign In</Link>
               <Link href="/sign-up" className="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded mx-2">Sign Up</Link>
             </div>
             
             {/* Mobile Menu that appears when isOpen is true */}
             {isOpen && (
-              <div className="flex flex-col items-center w-full">
-                <Link href="/" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Home</Link>
-                <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>API Configuration</Link>
-                <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Marketplace</Link>
-                <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Try</Link>
-              </div>
-            )}
+                    <div className="flex flex-col items-center w-full">
+                        <Link href="/" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Home</Link>
+                        {/* <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>API Configuration</Link>
+                        <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Marketplace</Link> */}
+                        <Link href="/sign-up" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Try</Link>           
+                            <>
+                                <Link href="/login" className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded my-2">Login</Link>
+                                <Link href="/sign-up" className="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded my-2">Signup</Link>
+                            </>
+                        
+                    </div>
+                )}
           </div>
         </nav>
       );
