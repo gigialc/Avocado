@@ -155,7 +155,7 @@ import LoginNavbar from '../components/loginnavbar';
             />
           </div>
 
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="text-gray-700 text-sm font-bold mb-2">
               Output Format:
             </label>
@@ -170,7 +170,7 @@ import LoginNavbar from '../components/loginnavbar';
               <option value="article">Article</option>
               <option value="paragraph">Paragraph</option>
             </select>
-          </div>
+          </div> */}
 
           <form onSubmit={handleSubmit}>
             <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
