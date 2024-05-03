@@ -94,7 +94,7 @@ import LoginNavbar from '../components/loginnavbar';
         <LoginNavbar />
           <div className="flex flex-col items-center min-h-screen pt-20 "> 
             <div className="w-full max-w-4xl rounded-lg">
-              <h1 className="text-xl font-bold text-yellow-600 text-left">Medical Knowledge Base</h1>
+              <h1 className="text-xl font-bold text-yellow-600 text-left">Health Knowledge Base</h1>
               <p className="text-left mb-4 pb-2 text-gray-900">Configure your output. How do you want the output to look like, what data sources would you like to use and topics.</p>
               {/* add a field for entering your existing api endpoint */}
               {/* <div className="flex items-center space-x-4 mb-4">
