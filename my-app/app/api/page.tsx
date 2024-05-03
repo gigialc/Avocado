@@ -124,7 +124,7 @@ import LoginNavbar from '../components/loginnavbar';
                 onChange={() => handleSourceChange('pubmed')}
                 className="mr-2"
               />
-              PubMedf
+              PubMed
               <input
                 type="checkbox"
                 checked={sources.cdc}
