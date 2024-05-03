@@ -16,8 +16,16 @@ import LoginNavbar from '../components/loginnavbar';
       const [title, setTitle] = useState('');
       const [apiUrl, setApiUrl] = useState('');
       const [apiCode, setApiCode] = useState('');
-      const [apiResponse, setApiResponse] = useState('');
+      const [apiResponse, setApiResponse] = useState('')
+        const [sources, setSources] = useState({
+          pubmed: false,
+          cdc: false,
+          fda: false
+        });
+        const [topicKeywords, setTopicKeywords] = useState('');
+        const [outputFormat, setOutputFormat] = useState('');;
     
+      
       const healthTopics = [
         'Menopause', 'Menstruation', 'Mental Health', 
         'Cardiovascular Health', 'Fertility', 'Pediatrics', 'Geriatrics', 'Nutrition'
@@ -28,6 +36,11 @@ import LoginNavbar from '../components/loginnavbar';
           setApiUrl('https://whispering-beyond-93204-750417d33585.herokuapp.com/add_fertilitae');
         }
       };
+
+      const handleSourceChange = (source: 'pubmed' | 'cdc' | 'fda') => {
+        setSources(prev => ({ ...prev, [source]: !prev[source] }));
+      };
+  
     
       const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
@@ -78,10 +91,10 @@ import LoginNavbar from '../components/loginnavbar';
         <LoginNavbar />
           <div className="flex flex-col items-center min-h-screen pt-20 "> 
             <div className="w-full max-w-4xl rounded-lg">
-              <h1 className="text-xl font-bold text-yellow-600 text-left">API Configuration</h1>
-              <p className="text-left mb-4 pb-2 text-gray-900">Configure your API. Add the articles and health information that you want your AI to generate information from.</p>
+              <h1 className="text-xl font-bold text-yellow-600 text-left">Output Configuration</h1>
+              <p className="text-left mb-4 pb-2 text-gray-900">Configure your output. Add the articles and health information that you want your AI to generate information from.</p>
               {/* add a field for entering your existing api endpoint */}
-              <div className="flex items-center space-x-4 mb-4">
+              {/* <div className="flex items-center space-x-4 mb-4">
                 <input
                   type="text"
                   id="apiCode"
@@ -95,8 +108,67 @@ import LoginNavbar from '../components/loginnavbar';
                 >
                   Activate
                 </button>
-              </div>
+              </div> */}
               
+              <div className="mb-4">
+            <label className="text-gray-700 text-sm font-bold mb-2">
+              Sources of Information:
+            </label>
+            <div className="flex items-center mb-2 text-black">
+              <input
+                type="checkbox"
+                checked={sources.pubmed}
+                onChange={() => handleSourceChange('pubmed')}
+                className="mr-2"
+              />
+              PubMed
+              <input
+                type="checkbox"
+                checked={sources.cdc}
+                onChange={() => handleSourceChange('cdc')}
+                className="mr-2 ml-4"
+              />
+              CDC
+              <input
+                type="checkbox"
+                checked={sources.fda}
+                onChange={() => handleSourceChange('fda')}
+                className="mr-2 ml-4"
+              />
+              FDA
+            </div>
+          </div>
+
+          <div className="mb-4">
+            <label className="text-gray-700 text-sm font-bold mb-2">
+              Topic Keywords:
+            </label>
+            <input
+              type="text"
+              value={topicKeywords}
+              onChange={(e) => setTopicKeywords(e.target.value)}
+              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Enter topic keywords"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="text-gray-700 text-sm font-bold mb-2">
+              Output Format:
+            </label>
+            <select
+              value={outputFormat}
+              onChange={(e) => setOutputFormat(e.target.value)}
+              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            >
+              <option value="">Select Format</option>
+              <option value="bullet_points">Bullet Points</option>
+              <option value="blog_format">Blog Format</option>
+              <option value="article">Article</option>
+              <option value="paragraph">Paragraph</option>
+            </select>
+          </div>
+
               {/* <div className="mb-4">
                 <button onClick={() => setActiveTab('text')} className={`px-4 py-2 ${activeTab === 'text' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tl-lg`}>Text Input</button>
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
