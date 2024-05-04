@@ -69,45 +69,44 @@ export default function Home() {
             </div>
           </div>
 
-
+       
           <div className="flex flex-col items-center justify-center w-full my-10 mt-40">
           <h2 className="text-4xl font-bold mb-8 text-black text-center">
-            GPT-4 vs. Avocado
+            Quickstart with Avocado
           </h2>
           <p className="text-base mb-8 text-black text-center px-4">
-            GPT-4 is a powerful AI language model, but it is not designed for healthcare. Avocado Health is a customizable AI chatbot that is specifically trained for medical conversations.
+            Follow these steps to get started with Avocado Health AI in minutes.
           </p>
-          <div className="grid grid-cols-2 gap-4 px-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 w-full">
             <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
               <div className="bg-gray-200 p-4 bg-yellow-500">
-                <h1 className="font-bold text-black text-center text-2xl">GPT-4</h1>
+                <h1 className="font-bold text-black text-center text-2xl">Step 1</h1>
               </div>
               <div className="mt-4 text-black">
-              <ul className="">
-                <li className='font-bold mb-5'>Can I use my ABRILADA pen straight from the refrigerator?
-                </li>
-                 <li>
-                 Yes, you can use your ABRILADA pen straight from the refrigerator, but it is generally recommended to allow the pen to warm to room temperature before injection. This can make the injection process more comfortable and reduce discomfort at the injection site.
-               </li>
-              </ul>
-            </div>
+                <p className='font-bold mb-5'>Sign up for Avocado Health</p>
+                <p>Create an account on Avocado Health. If you forget your password, please contact us.
+
+
+                </p>
+              </div>
             </div>
             <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
               <div className="bg-gray-200 p-4 bg-yellow-500">
-                <h1 className="font-bold text-black text-center text-2xl">Avocado 🥑</h1>
+                <h1 className="font-bold text-black text-center text-2xl">Step 2</h1>
               </div>
               <div className="mt-4 text-black">
-              <ul className="">
-                <li className='font-bold mb-5'>Can I use my ABRILADA pen straight from the refrigerator?
-                </li>
-                 <li className='mb-4'>
-                 Yes, however you may find that using the prefilled syringe at room temperature reduces stinging or discomfort. If you allow your prefilled syringe to reach room temperature before use, you must keep it away from direct sunlight as this can damage your medicine.
-                 </li>
-                 <li>Click
-                  <a href="https://www.pfizermedicalinformation.com/patient/abrilada" className="text-blue-500 hover:text-blue-700" target="_blank"> here</a> to find the full guide.
-                </li>
-              </ul>
+                <p className='font-bold mb-5'>Customize your AI</p>
+                <p>Access the dashboard to configure your preferences, key topics and sources.</p>
+              </div>
             </div>
+            <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
+              <div className="bg-gray-200 p-4 bg-yellow-500">
+                <h1 className="font-bold text-black text-center text-2xl">Step 3</h1>
+              </div>
+              <div className="mt-4 text-black">
+                <p className='font-bold mb-5'>Generate content</p>
+                <p>Go to the generate content tab and ask questions, set output format and target user.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -136,8 +135,8 @@ export default function Home() {
 
 
         <div className="flex flex-col justify-center items-center w-full mx-auto text-center pb-40">
-          <h2 className="text-4xl font-bold mb-8 text-black">Effortless Setup in Minutes</h2>
-          <p className="text-xl mb-8 text-black">Activate your API quickly and start enhancing your health apps today.</p>
+          <h2 className="text-4xl font-bold mb-8 text-black">Avocado Health for Enterprise</h2>
+          <p className="text-xl mb-8 text-black">Book a demo to see how Avocado Health can help you deliver AI health content to your patients.</p>
           <button 
             className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full md:w-auto transition duration-300 ease-in-out"
             onClick={handleDemoClick}>
