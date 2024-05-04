@@ -9,6 +9,8 @@ import LoginNavbar from '../components/loginnavbar';
     export default function APIPage() {
       const [topic, setTopic] = useState('');
       const [message, setMessage] = useState('');
+      const [link, setLink] = useState(''); // New state variable for the link
+
 
       const [inputText, setInputText] = useState('');
       const [file, setFile] = useState<File | null>(null);
@@ -49,9 +51,37 @@ import LoginNavbar from '../components/loginnavbar';
           setFile(event.target.files[0]);
         }
       };
+
+      const handleAddSubmit = async () => {
+        console.log('here')
+        console.log(inputText, link, title)
+
+        // console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
+        // checkApiCode();
+        // Add your logic for API key generation or other actions here
+        const options = {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({title: title, text: inputText, link: link})
+        };
+
+        try {
+          // console.log('api', apiUrl)
+          const response = await fetch('http://127.0.0.1:8000/add_pharma', options);
+          const data = await response.json();
+          console.log('dataa:', data);
+          if (data === true) {
+            // setApiResponse('https://whispering-beyond-93204-750417d33585.herokuapp.com/fertilitae');
+            setMessage('Article successfully added!');
+          }
+        } catch (err) {
+          console.error(err);
+        }
+        // Your logic here
+      };
     
-      const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+      const handleSubmit = async () => {
+        // event.preventDefault();
         // console.log(`Topic: ${topic}, Text: ${inputText}, File: ${file?.name}, Links: ${links}`);
         // checkApiCode();
         // Add your logic for API key generation or other actions here
@@ -191,7 +221,7 @@ import LoginNavbar from '../components/loginnavbar';
                 <button onClick={() => setActiveTab('file')} className={`px-4 py-2 ${activeTab === 'file' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'}`}>File Upload</button>
                 <button onClick={() => setActiveTab('link')} className={`px-4 py-2 ${activeTab === 'link' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-800'} rounded-tr-lg`}>URLs</button>
               </div> */}
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form className="space-y-4">
                 {/* <div>
                   <label htmlFor="topic" className="block text-gray-700 text-sm font-bold mb-2">Choose a health topic:</label>
                   <select
@@ -219,6 +249,17 @@ import LoginNavbar from '../components/loginnavbar';
                   placeholder="Enter your title here"
                 />
               </div>
+
+              <div>
+                <label htmlFor="link" className="block text-gray-700 text-sm font-bold mb-2">Enter link:</label>
+                <input
+                    id="link"
+                    value={link}
+                    onChange={(e) => setLink(e.target.value)}
+                    className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter your link here"
+                />
+            </div>
 
                 {activeTab === 'text' && (
                   <div>
@@ -266,9 +307,13 @@ import LoginNavbar from '../components/loginnavbar';
                     ))}
                   </div>
                 )}
-                <button type="submit" className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Add
-                </button>
+                <button 
+                    type="button" 
+                    onClick={handleAddSubmit} 
+                    className="bg-yellow-600 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  >
+                    Add
+              </button>
               </form>
               {apiResponse && (
                 <div className="text-center mt-4 mb-30">
