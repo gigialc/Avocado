@@ -19,14 +19,14 @@ const Footer: React.FC = () => {
                             Contribute
                         </Link> */}
                         <Link href="/api" className="hover:underline">
-                            API Config
+                            AI Config
                         </Link>
 
                          <Link href="/marketplace" className="hover:underline">
                          Marketplace 
                          </Link>   
                          <Link href="/content-hub" className="hover:underline">
-                         Test API 
+                         Generate Content
                          </Link>   
                     </div> 
                     <div>
