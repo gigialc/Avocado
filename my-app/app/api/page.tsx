@@ -67,7 +67,7 @@ import LoginNavbar from '../components/loginnavbar';
 
         try {
           // console.log('api', apiUrl)
-          const response = await fetch('http://127.0.0.1:8000/add_pharma', options);
+          const response = await fetch('https://avocado-backend-dtfu.onrender.com/add_pharma', options);
           const data = await response.json();
           console.log('dataa:', data);
           if (data === true) {
