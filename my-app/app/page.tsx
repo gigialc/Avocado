@@ -26,7 +26,7 @@ export default function Home() {
                 avocado health
               </h1>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-               A safety layer for generating AI health content
+              AI health fact checker for health app ads
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
                 <button 
@@ -44,33 +44,33 @@ export default function Home() {
               <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
               </svg>
-              <span className="ml-4 text-gray-700 font-bold">Compliance</span>
+              <span className="ml-4 text-gray-700 font-bold">Compliant</span>
             </div>
 
             <div className="flex items-center">
               <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
               </svg>
-              <span className="ml-4 text-gray-700 font-bold">Accuracy</span>
+              <span className="ml-4 text-gray-700 font-bold">Accurate</span>
             </div>
 
             <div className="flex items-center">
               <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
               </svg>
-              <span className="ml-4 text-gray-700 font-bold">Medical References</span>
+              <span className="ml-4 text-gray-700 font-bold">Up to Date</span>
             </div>
 
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
               </svg>
               <span className="ml-4 text-gray-700 font-bold">Personalization</span>
-            </div>
+            </div> */}
           </div>
 
        
-          <div className="flex flex-col items-center justify-center w-full my-10 mt-40">
+          {/* <div className="flex flex-col items-center justify-center w-full my-10 mt-40">
           <h2 className="text-4xl font-bold mb-8 text-black text-center">
             Quickstart with Avocado
           </h2>
@@ -107,14 +107,14 @@ export default function Home() {
                 <p className='font-bold mb-5'>Generate content</p>
                 <p>Go to the generate content tab and ask questions, set output format and target user.</p>
               </div>
-            </div>
+            </div> 
           </div>
-        </div>
+        </div>*/}
 
 
           <div className="w-full max-w-5xl mt-40 pb-32">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">
-              Revolutionizing patient education with AI 🥑
+              Revolutionizing health marketing with AI 🥑
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="py-5 px-4">
@@ -136,7 +136,7 @@ export default function Home() {
 
         <div className="flex flex-col justify-center items-center w-full mx-auto text-center pb-40">
           <h2 className="text-4xl font-bold mb-8 text-black">Avocado Health for Enterprise</h2>
-          <p className="text-xl mb-8 text-black">Book a demo to see how Avocado Health can help you deliver AI health content to your patients.</p>
+          <p className="text-xl mb-8 text-black">Book a demo to see how Avocado Health can help you create medically accurate ads.</p>
           <button 
             className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full md:w-auto transition duration-300 ease-in-out"
             onClick={handleDemoClick}>
