@@ -49,14 +49,14 @@ const LoginNavbar: React.FC = () => {
                     </div>
                 </div>
 
-                {isOpen && (
+            
                     <div className="flex flex-col items-center w-full">
                         <Link href="/" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Home</Link>
                         <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>AI Configuration</Link>
                         {/* <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Marketplace</Link> */}
                         <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Generate Content</Link>
                     </div>
-                )}
+               
             </div>
         </nav>
     );
