@@ -40,7 +40,7 @@ const LoginNavbar: React.FC = () => {
                             {isDropdownOpen && (
                                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                                     <Link href="/api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Configuration</Link>
-                                    <Link href="/marketplace" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Marketplace</Link>
+                                    {/* <Link href="/marketplace" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Marketplace</Link> */}
                                     <Link href="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Generate Content</Link>
                                     <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</Link>
                                 </div>
@@ -53,7 +53,7 @@ const LoginNavbar: React.FC = () => {
                     <div className="flex flex-col items-center w-full">
                         <Link href="/" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Home</Link>
                         <Link href="/api" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>AI Configuration</Link>
-                        <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Marketplace</Link>
+                        {/* <Link href="/marketplace" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Marketplace</Link> */}
                         <Link href="/content-hub" className="text-sm font-medium text-gray-900 dark:text-gray-800 hover:text-purple-700 dark:hover:text-gray-200 my-2" onClick={() => setIsOpen(false)}>Generate Content</Link>
                     </div>
                 )}
