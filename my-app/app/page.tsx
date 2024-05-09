@@ -29,11 +29,11 @@ export default function Home() {
               AI health fact checker for health app ads
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
-                <button 
-                  className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full sm:w-auto transition duration-300 ease-in-out"
-                  onClick={handleDemoClick}>
-                  Book a Demo
-                </button>
+              <button 
+              className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 sm:px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full sm:w-auto transition duration-300 ease-in-out"
+              onClick={handleDemoClick}>
+              Book a Demo
+            </button>
               </div>
             </div>
           </div>
