@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center w-full sm:p-20 pt-12">
           <div className="flex flex-col sm:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 sm:space-y-0 sm:space-x-10">
             <div className="w-full">
-              <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 py-20 sm:py-8">
+              <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 mt-20 mb-10 sm:py-8">
                 avocado health
               </h1>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
