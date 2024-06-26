@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center w-full sm:p-20 pt-12">
           <div className="flex flex-col sm:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 sm:space-y-0 sm:space-x-10">
             <div className="w-full">
-              <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 py-2 sm:py-8">
+              <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 py-20 sm:py-8">
                 avocado health
               </h1>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
@@ -30,7 +30,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
               <button 
-              className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 sm:px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full sm:w-auto transition duration-300 ease-in-out"
+              className="w-30p sm:w-auto bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 sm:px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
               onClick={handleDemoClick}>
               Book a Demo
             </button>
@@ -39,34 +39,27 @@ export default function Home() {
           </div>
           <br />
 
-          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 pt-10">
-            <div className="flex items-center">
-              <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span className="ml-4 text-gray-700 font-bold">Compliant</span>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 pt-10 px-4">
+          <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Compliant</span>
+          </div>
 
-            <div className="flex items-center">
-              <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span className="ml-4 text-gray-700 font-bold">Accurate</span>
-            </div>
+          <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Accurate</span>
+          </div>
 
-            <div className="flex items-center">
-              <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span className="ml-4 text-gray-700 font-bold">Up to Date</span>
-            </div>
-
-            {/* <div className="flex items-center">
-              <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span className="ml-4 text-gray-700 font-bold">Personalization</span>
-            </div> */}
+          <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span className="ml-4 text-gray-700 font-bold">Up to Date</span>
+          </div>
           </div>
 
        
@@ -138,10 +131,10 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8 text-black">Avocado Health for Enterprise</h2>
           <p className="text-xl mb-8 text-black">Book a demo to see how Avocado Health can help you create medically accurate ads.</p>
           <button 
-            className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline w-full md:w-auto transition duration-300 ease-in-out"
-            onClick={handleDemoClick}>
-            Book a Demo
-          </button>
+              className="w-30p sm:w-auto bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 sm:px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
+              onClick={handleDemoClick}>
+              Book a Demo
+            </button>
         </div>
 
       </main>

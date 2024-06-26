@@ -24,6 +24,9 @@ const config: Config = {
           DEFAULT: 'rgb(255,255,255)', // white text
           light: 'rgb(0,0,0)', // black text in light theme
         },
+        width: {
+          '30p': '30%',
+        },
 
       },
       backgroundImage: {

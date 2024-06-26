@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         <div className="container px-6 py-3 mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/" passHref>
-            <span className="text-xl font-bold text-yellow-600 dark:text-yellow md:text-3xl cursor-pointer">avocado</span>
+            <span className="text-3xl font-bold text-yellow-600 dark:text-yellow md:text-3xl cursor-pointer">avocado</span>
           </Link>
           
           {/* Links and Buttons, always visible */}
