@@ -26,7 +26,7 @@ export default function Home() {
                 avocado health
               </h1>
               <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-              AI copilot for compliant health content
+              AI copilot for safe health content generation
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
               <button 
@@ -44,7 +44,7 @@ export default function Home() {
             <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
             </svg>
-            <span className="ml-4 text-gray-700 font-bold">Compliant</span>
+            <span className="ml-4 text-gray-700 font-bold">Safe</span>
           </div>
 
           <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
@@ -107,7 +107,7 @@ export default function Home() {
 
           <div className="w-full max-w-5xl mt-40 pb-32">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">
-              Revolutionizing health marketing with AI 🥑
+              Revolutionizing health content generation with AI 🥑
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="py-5 px-4">
