@@ -136,7 +136,6 @@ export default function Home() {
               Book a Demo
             </button>
         </div>
-
       </main>
       <Footer />
       <Analytics />
