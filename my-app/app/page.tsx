@@ -33,7 +33,7 @@ export default function Home() {
           {/* Content */}
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight font-extrabold text-white">
+              <h1 className="text-5xl sm:text-5xl md:text-6xl tracking-tight font-extrabold text-white">
                 <span className="block text-primary">avocado ai</span>
               </h1>
               <p className="mt-3 font-bold max-w-md mx-auto text-black text-lg sm:text-xl md:text-2xl md:mt-5 md:max-w-3xl">
@@ -169,10 +169,10 @@ export default function Home() {
               Join the revolution in health content writing and analysis.
             </p>
             <a
-              href="#"
+              href="https://calendly.com/galcarazb/30min"
               className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50 sm:w-auto"
             >
-              Sign up for free
+            Book a demo
             </a>
           </div>
         </section>
