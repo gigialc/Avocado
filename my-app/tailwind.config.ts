@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'primary': '#C9A052', // Hot Pink
+        "avo": "#EDE9E3",
         'center-color': '#ffcad4', // Very light pink
         'edge-color': '#fff9c2', // Very light yellow
         'background-start': {

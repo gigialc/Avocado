@@ -1,144 +1,184 @@
-'use client'
+"use client"
 import React from 'react';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import { Analytics } from "@vercel/analytics/react"
-import { useAuth } from '../authContext';
-
+import { Analytics } from "@vercel/analytics/react";
+import { Clipboard, Book, Zap, Activity, Smartphone, Scale, User } from 'lucide-react';
 
 export default function Home() {
   const handleDemoClick = () => {
-    window.location.href = 'https://calendly.com/galcarazb/30min'; // Specify the URL
-  };
-
-  const handleOpenClick = () => {
-    window.location.href = "https://healthbyte.mintlify.app/quickstart"
+    window.location.href = "/sign-up";
   };
 
   return (
     <>
-      <main className="flex flex-col min-h-screen bg-radial-gradient from-center to-edges sm:p-5 p-4">
-        <Navbar /> {/* Navbar placed right at the top inside main */}
-        <div className="flex flex-col justify-center items-center w-full sm:p-20 pt-12">
-          <div className="flex flex-col sm:flex-row justify-center items-center w-full max-w-5xl text-center space-y-8 sm:space-y-0 sm:space-x-10">
-            <div className="w-full">
-              <h1 className="text-5xl sm:text-7xl font-bold text-yellow-500 px-4 sm:px-10 mt-20 mb-10 sm:py-8">
-                avocado health
+      <main className="flex flex-col min-h-screen bg-avo">
+        <Navbar />
+        
+          {/* Hero Section */}
+        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 mt-16 sm:mt-20">
+          {/* Background image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center z-0"
+            style={{
+              backgroundImage: "url('avocado.png')",
+              // filter: "brightness(0.7)"  // Darken the image slightly
+            }}
+          ></div>
+          
+          
+          {/* <div className="absolute inset-0 bg-black opacity-50 z-10"></div> */}
+          
+          {/* Content */}
+          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight font-extrabold text-white">
+                <span className="block text-primary">avocado ai</span>
               </h1>
-              <p className="text-2xl font-bold text-center text-gray-800 mb-6">
-              AI copilot for safe health content generation
+              <p className="mt-3 font-bold max-w-md mx-auto text-black text-lg sm:text-xl md:text-2xl md:mt-5 md:max-w-3xl">
+                Ensuring accuracy and guideline compliance in health writing.
               </p>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-4 justify-center items-center">
-              <button 
-              className="w-30p sm:w-auto bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 sm:px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
-              onClick={handleDemoClick}>
-              Book a Demo
-            </button>
+              <div className="mt-8 sm:mt-10 flex justify-center">
+                <button
+                  onClick={handleDemoClick}
+                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-700 hover:bg-purple-800 font-bold transition duration-150 ease-in-out"
+                >
+                  Get started
+                </button>
               </div>
             </div>
           </div>
-          <br />
+        </section>
 
-          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 pt-10 px-4">
-          <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
-            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span className="ml-4 text-gray-700 font-bold">Safe</span>
+
+        {/* Features Section */}
+        <section className="py-16 mb-20 mt-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="text-base text-green-700 font-semibold tracking-wide uppercase">Features</h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                A better way to ensure health content accuracy
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                avocado ai provides cutting-edge tools to keep your health content up-to-date and accurate.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                {[
+                  { icon: Clipboard, title: "Latest Guidelines", description: "Stay updated with the most recent medical guidelines and best practices." },
+                  { icon: Book, title: "Accuracy Check", description: "AI-powered verification ensures your content aligns with current medical knowledge." },
+                  { icon: Zap, title: "Rapid Analysis", description: "Quick and efficient content analysis to save you time and resources." },
+                  { icon: Activity, title: "Continuous Monitoring", description: "Ongoing checks to ensure your content remains accurate over time." },
+                ].map((feature, index) => (
+                  <div key={index} className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
+                        <feature.icon className="h-6 w-6" aria-hidden="true" />
+                      </div>
+                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
+                    </dt>
+                    <dd className="mt-2 ml-16 text-base text-gray-500">
+                      {feature.description}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
+        </section>
 
-          <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
-            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span className="ml-4 text-gray-700 font-bold">Accurate</span>
-          </div>
-
-          <div className="flex items-center bg-white border border-green-500 rounded-lg p-4 shadow-md">
-            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span className="ml-4 text-gray-700 font-bold">Up to Date</span>
-          </div>
-          </div>
-
-       
-          {/* <div className="flex flex-col items-center justify-center w-full my-10 mt-40">
-          <h2 className="text-4xl font-bold mb-8 text-black text-center">
-            Quickstart with Avocado
-          </h2>
-          <p className="text-base mb-8 text-black text-center px-4">
-            Follow these steps to get started with Avocado Health AI in minutes.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 w-full">
-            <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
-              <div className="bg-gray-200 p-4 bg-yellow-500">
-                <h1 className="font-bold text-black text-center text-2xl">Step 1</h1>
-              </div>
-              <div className="mt-4 text-black">
-                <p className='font-bold mb-5'>Sign up for Avocado Health</p>
-                <p>Create an account on Avocado Health. If you forget your password, please contact us.
-
-
-                </p>
+        {/* Problem Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="text-base text-green-700 font-semibold tracking-wide uppercase">The Challenge</h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Navigating the complexities of health content
+              </p>
+            </div>
+            <div className="mt-10">
+              <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                {[
+                  { icon: Clipboard, title: "Rapidly Evolving Guidelines", description: "Medical guidelines are constantly updated, making it challenging for content creators to stay current." },
+                  { icon: Book, title: "Information Overload", description: "With vast amounts of health content online, ensuring accuracy across all platforms is increasingly difficult." },
+                ].map((problem, index) => (
+                  <div key={index} className="relative">
+                    <div className="text-center">
+                      <problem.icon className="mx-auto h-12 w-12 text-purple-600" />
+                      <h3 className="mt-4 text-lg leading-6 font-medium text-gray-900">{problem.title}</h3>
+                      <p className="mt-2 text-base text-gray-500">
+                        {problem.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
-              <div className="bg-gray-200 p-4 bg-yellow-500">
-                <h1 className="font-bold text-black text-center text-2xl">Step 2</h1>
-              </div>
-              <div className="mt-4 text-black">
-                <p className='font-bold mb-5'>Customize your AI</p>
-                <p>Access the dashboard to configure your preferences, key topics and sources.</p>
+          </div>
+        </section>
+
+        {/* Trends Section */}
+        <section className="py-16 mt-20 mb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="text-base text-green-700 font-semibold tracking-wide uppercase">Emerging Trends</h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                The evolving landscape of health information
+              </p>
+            </div>
+            <div className="mt-10">
+              <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                {[
+                  { icon: Smartphone, title: "Rise of Digital Health", description: "Increasing adoption of telemedicine and health apps drives demand for accurate digital health content." },
+                  { icon: Scale, title: "Changing Regulations", description: (
+                    <>
+                      Regulatory bodies are adapting to the digital health era. 
+                      <a href="#" className="text-green-600 hover:text-green-700 ml-1">
+                        FDA is looking into monitoring digital health apps more closely
+                      </a>.
+                    </>
+                  )},
+                  { icon: User, title: "Personalized Health Information", description: "Growing trend towards tailored health content necessitates tools to verify accuracy across diverse topics." },
+                ].map((trend, index) => (
+                  <div key={index} className="relative">
+                    <div className="text-center">
+                      <trend.icon className="mx-auto h-12 w-12 text-purple-700" />
+                      <h3 className="mt-4 text-lg leading-6 font-medium text-gray-900">{trend.title}</h3>
+                      <p className="mt-2 text-base text-gray-500">
+                        {trend.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="bg-white p-6 m-4 shadow-lg flex flex-col justify-between">
-              <div className="bg-gray-200 p-4 bg-yellow-500">
-                <h1 className="font-bold text-black text-center text-2xl">Step 3</h1>
-              </div>
-              <div className="mt-4 text-black">
-                <p className='font-bold mb-5'>Generate content</p>
-                <p>Go to the generate content tab and ask questions, set output format and target user.</p>
-              </div>
-            </div> 
           </div>
-        </div>*/}
+        </section>
 
-
-          <div className="w-full max-w-5xl mt-40 pb-32">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-20">
-              Revolutionizing health content generation with AI 🥑
+        {/* CTA Section */}
+        <section className="bg-purple-400">
+          <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              <span className="block">Ready to ensure your health content accuracy?</span>
+              <span className="block">Start using avocado ai today.</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <div className="py-5 px-4">
-                <p className="text-5xl font-bold text-purple-700 py-3">70%↑</p>
-                <p className="text-xl text-gray-600">Delivery speed</p>
-              </div>
-              <div className="py-5 px-4">
-                <p className="text-5xl font-bold text-purple-700 py-3">50%↑</p>
-                <p className="text-xl text-gray-600">Engagement</p>
-              </div>
-              <div className="py-5 px-4">
-                <p className="text-5xl font-bold text-purple-700 py-3">100%</p>
-                <p className="text-xl text-gray-600">Science-backed</p>
-              </div>
-            </div>
+            <p className="mt-4 text-lg leading-6 text-green-100">
+              Join the revolution in health content writing and analysis.
+            </p>
+            <a
+              href="#"
+              className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50 sm:w-auto"
+            >
+              Sign up for free
+            </a>
           </div>
-        </div>
-
-
-        <div className="flex flex-col justify-center items-center w-full mx-auto text-center pb-40">
-          <h2 className="text-4xl font-bold mb-8 text-black">Avocado Health for Enterprise</h2>
-          <p className="text-xl mb-8 text-black">Book a demo to see how Avocado Health can help you create medically accurate ads.</p>
-          <button 
-              className="w-30p sm:w-auto bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 sm:px-4 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
-              onClick={handleDemoClick}>
-              Book a Demo
-            </button>
-        </div>
+        </section>
+        
       </main>
       <Footer />
       <Analytics />
     </>
   );
-};
+}

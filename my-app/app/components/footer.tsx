@@ -22,15 +22,15 @@ const Footer: React.FC = () => {
                             AI Config
                         </Link>
 
-                         <Link href="/marketplace" className="hover:underline">
+                         {/* <Link href="/marketplace" className="hover:underline">
                          Marketplace 
-                         </Link>   
+                         </Link>    */}
                          <Link href="/content-hub" className="hover:underline">
                          Generate Content
                          </Link>   
                     </div> 
                     <div>
-                        <a href="mailto:jricramc@mit.edu, galcaraz@bu.edu" className="hover:underline">
+                        <a href="mailto: galcaraz@bu.edu" className="hover:underline">
                             Contact Us       
                         </a>
                     </div>

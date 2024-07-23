@@ -155,7 +155,7 @@ import LoginNavbar from '../components/loginnavbar';
                 className="mr-2"
               />
               PubMed
-              <input
+              {/* <input
                 type="checkbox"
                 checked={sources.cdc}
                 onChange={() => handleSourceChange('cdc')}
@@ -168,7 +168,7 @@ import LoginNavbar from '../components/loginnavbar';
                 onChange={() => handleSourceChange('fda')}
                 className="mr-2 ml-4"
               />
-              FDA
+              FDA */}
             </div>
           </div>
 
