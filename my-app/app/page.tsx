@@ -68,11 +68,12 @@ export default function Home() {
             <div className="mt-10">
               <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 {[
-                  { icon: Clipboard, title: "Latest Guidelines", description: "Stay updated with the most recent medical guidelines and best practices." },
-                  { icon: Book, title: "Accuracy Check", description: "AI-powered verification ensures your content aligns with current medical knowledge." },
-                  { icon: Zap, title: "Rapid Analysis", description: "Quick and efficient content analysis to save you time and resources." },
-                  { icon: Activity, title: "Continuous Monitoring", description: "Ongoing checks to ensure your content remains accurate over time." },
-                ].map((feature, index) => (
+                    { icon: Clipboard, title: "Guideline Tracking", description: "AI-powered system that continuously monitors and updates to the latest health guidelines and recommendations." },
+                    { icon: Book, title: "Content Analysis", description: "Rapidly scans and analyzes health articles for outdated or inconsistent information." },
+                    { icon: Zap, title: "Smart Recommendations", description: "Suggests evidence-based updates to health content, complete with references for medical review." },
+                     { icon: Activity, title: "Automated Updating", description: "Once approved, automatically updates multiple articles across the web to ensure consistent, accurate health information." },
+                       ].map((feature, index) => (
+                 
                   <div key={index} className="relative">
                     <dt>
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
@@ -102,9 +103,9 @@ export default function Home() {
             <div className="mt-10">
               <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 {[
-                  { icon: Clipboard, title: "Rapidly Evolving Guidelines", description: "Medical guidelines are constantly updated, making it challenging for content creators to stay current." },
-                  { icon: Book, title: "Information Overload", description: "With vast amounts of health content online, ensuring accuracy across all platforms is increasingly difficult." },
-                ].map((problem, index) => (
+                { icon: Clipboard, title: "Rapidly Evolving Guidelines", description: "Medical recommendations change frequently, making it challenging for content creators to stay current. For example, advice on breast self-examinations has changed significantly in recent years." },
+                { icon: Book, title: "Inconsistent Online Information", description: "With vast amounts of health content online, ensuring all information is up-to-date and consistent across platforms is increasingly difficult." },
+              ].map((problem, index) => (
                   <div key={index} className="relative">
                     <div className="text-center">
                       <problem.icon className="mx-auto h-12 w-12 text-purple-600" />
@@ -132,17 +133,11 @@ export default function Home() {
             <div className="mt-10">
               <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
                 {[
-                  { icon: Smartphone, title: "Rise of Digital Health", description: "Increasing adoption of telemedicine and health apps drives demand for accurate digital health content." },
-                  { icon: Scale, title: "Changing Regulations", description: (
-                    <>
-                      Regulatory bodies are adapting to the digital health era. 
-                      <a href="#" className="text-green-600 hover:text-green-700 ml-1">
-                        FDA is looking into monitoring digital health apps more closely
-                      </a>.
-                    </>
-                  )},
-                  { icon: User, title: "Personalized Health Information", description: "Growing trend towards tailored health content necessitates tools to verify accuracy across diverse topics." },
-                ].map((trend, index) => (
+                          { icon: Smartphone, title: "Evidence-Based Health Content", description: "Growing emphasis on providing health information that aligns with the latest scientific evidence and guidelines." },
+                          { icon: Scale, title: "AI in Healthcare", description: "Increasing use of artificial intelligence to process and analyze large volumes of medical information and guidelines." },
+                          { icon: User, title: "Personalized Health Information", description: "Growing trend towards tailored health content necessitates tools to verify accuracy across diverse topics and update recommendations based on individual risk factors." },
+                        ].map((trend, index) => (
+                  
                   <div key={index} className="relative">
                     <div className="text-center">
                       <trend.icon className="mx-auto h-12 w-12 text-purple-700" />
@@ -162,8 +157,8 @@ export default function Home() {
         <section className="bg-purple-400">
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              <span className="block">Ready to ensure your health content accuracy?</span>
-              <span className="block">Start using avocado ai today.</span>
+            <span className="block">Ready to ensure your health content stays current and accurate?</span>
+            <span className="block">Start using avocado ai today.</span>
             </h2>
             <p className="mt-4 text-lg leading-6 text-green-100">
               Join the revolution in health content writing and analysis.
