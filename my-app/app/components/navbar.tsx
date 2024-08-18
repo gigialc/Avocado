@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-      <nav className="bg-avo mt-10">
+      <nav className=" mt-10">
         <div className="container px-6 py-3 mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/" passHref>
