@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                          </Link>   
                     </div> 
                     <div>
-                        <a href="mailto: galcaraz@bu.edu" className="hover:underline">
+                        <a href="mailto: georgina@tryavocadohealth.com" className="hover:underline">
                             Contact Us       
                         </a>
                     </div>
